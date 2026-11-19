@@ -340,6 +340,57 @@ Bộ ghi trạng thái cửa sổ mỗi 0,7 s suốt lần chạy: cửa sổ ch
 
 Bằng chứng: `session-C360_191126_0004-run2\` (log, model.json, control-readbacks, ảnh FRA, wav IO006/IO008 hai lượt, `IO001-MicEffects-excerpt.json`).
 
+## 7. v1.5.6 + config rev 7: lần đo 14:47 (`C360_191126_0005_144705053`)
+
+v1.5.6 đã làm được: tự nối BLE (8,8 s), không còn popup A/B, IO001/IO002/IO008/IO009 bỏ LINE CHUẨN. Rev 7: IO006/IO008 phát −6 dBFS, nên **cổng SNR đã qua** (IO006 SNR 27,3 dB; sweep kiểm của IO008 SNR 22 dB, matched filter 48 dB). Tổng 155 s, nhưng **vẫn không gửi server**.
+
+| Bài | Kết quả | Lý do |
+|---|---|---|
+| IO001 | KHÔNG ĐẠT | `ECHO_MISSING` (lần này không bị "chưa xác định") |
+| IO002, IO004, IO005, IO007 | ĐẠT | |
+| IO003 MIC khô | **KHÔNG ĐẠT** | THD 1 kHz **0,700 %** > 0,5 %. Đáp tuyến khớp LINE CHUẨN 0/408 điểm. Cùng loa: 0,443 % (13:25), 0,213 % (13:42), 0,700 % (14:48) |
+| IO006 Mic thực tế | "KHÔNG ĐẠT" trên màn hình, log ghi "không kết luận" | "Tự lấy LINE CHUẨN chưa xong (lượt 1/3)", THD 1 kHz 0,568 % |
+| IO008 Rè | ĐO KHÔNG HỢP LỆ (log lại ghi "1/1 lượt đạt") | Pink/Chirp: `0x8889000A` thiết bị đang bị giữ, `FRA-IO008.png` trống |
+| IO009 | KHÔNG ĐẠT (màu đỏ) | FBX thêm −1,0 dB (yêu cầu ≥ 6) |
+| **Tổng** | **CHƯA ĐO ĐỦ, không gửi** | dù có 3 bài KHÔNG ĐẠT |
+
+### 7.1 Có bài KHÔNG ĐẠT thì tổng là KHÔNG ĐẠT và gửi server → CODE (ưu tiên 1)
+
+> Chủ: "có không đạt thì kết quả chung là không đạt và gửi lên server chứ"
+
+Log: `[Server] Không gửi server: chỉ gửi kết quả Auto Test hoàn tất (PASS/FAIL).` Đổi luật: có ít nhất 1 bài **bắt buộc** KHÔNG ĐẠT thì tổng = **KHÔNG ĐẠT** và **gửi ngay** (báo cáo kèm danh sách bài INVALID hoặc chưa kết luận). Chỉ khi không có FAIL nào mà còn INVALID mới là "CHƯA ĐO ĐỦ". v1.5.6 hứa "đo hết các bài rồi báo kết quả gửi server" nhưng chưa đúng trong trường hợp này.
+
+### 7.2 IO009 tùy chọn: hiển thị **màu xám**, không đỏ/xanh → CODE (+ config)
+
+> Chủ: "gain trước hú thì để màu xám thôi vì không xét"
+
+Bài tùy chọn (IO009) luôn hiện xám (badge, danh sách, LblVerdict, ảnh, báo cáo server), chỉ ghi số đo, không dùng chữ "KHÔNG ĐẠT". Config rev 5 có `MinimumAddedDb: 6`; nếu không xét thì bỏ trống trên web.
+
+### 7.3 Sai số LINE CHUẨN 10 %: đã có trong config nhưng đang TẮT → CONFIG web
+
+> Chủ: "mấy bài có line chuẩn cho phép sai số 10% chưa"
+
+Mọi bài: `AllowLineOutliers: false`, `AllowedLineOutlierPercent: 10`, nên log ghi "cho phép ≤0%". Chiều 13:26, IO005 FAIL chỉ vì 2/408 điểm (0,49 %) lệch tối đa 4,88 dB. Bật `AllowLineOutliers: true` cho IO003–IO007 thì cho phép 10 % điểm ngoài ±3 dB.
+
+### 7.4 IO003 THD MIC IN dao động 0,21–0,70 % → ĐIỀU TRA (code)
+
+> Chủ: "mic in không effect đẹp thế mà không đạt hả"
+
+FAIL do **THD**, không phải đáp tuyến. Bản thu sạch (matched filter 69 dB, SNR 39–44 dB). **Giả thuyết, chưa kiểm chứng:** IO002 đo được đường MIC luôn bị **dịch tần ≈ −3 Hz kể cả khi FBX TẮT**. Dịch tần làm hệ thống không còn bất biến theo thời gian, nên THD tính bằng log-sweep deconvolution bị rò năng lượng sang cửa sổ hài, ra số ngẫu nhiên theo pha. Đề xuất: với MIC IN, đo THD bằng sine 1 kHz ổn định (FFT, cửa sổ dài) thay cho sweep, hoặc tắt hẳn dịch tần trước bài khô nếu firmware cho phép. Kiểm lại readback xem bài "Không effect" có còn FBX hoặc shifter không.
+
+### 7.5 IO008 Rè không có hình: `0x8889000A` (AUDCLNT_E_DEVICE_IN_USE) → CODE + trạm
+
+Sweep kiểm tín hiệu chạy được (shared mode), nhưng Pink/Chirp mở thiết bị (nhiều khả năng **exclusive**) thì lỗi "đang bị giữ". Trên trạm lúc đó còn một tiến trình **`rundll32 mmsys.cpl,,sounds` mồ côi** (mở 13:45, không còn cửa sổ nào, vẫn nạp AudioSes/MMDevApi). Chưa xác nhận đây là thủ phạm (Claude bị chặn đóng tiến trình). Code nên:
+(a) thử lại ở shared mode khi exclusive bị `0x8889000A`;
+(b) ghi rõ **thiết bị nào** (mic KT hay ngõ phát FastTrack) và **tiến trình nào** đang giữ;
+(c) log không được ghi "1/1 lượt đạt" khi Pink/Chirp chưa chạy (màn hình thì ghi ĐO KHÔNG HỢP LỆ, hai chỗ mâu thuẫn).
+
+### 7.6 IO006 tự lấy LINE CHUẨN không bao giờ xong trong một phiên → CODE
+
+Popup đầu phiên: "Chưa có LINE CHUẨN… IO006… CÓ: mỗi bài thiếu chuẩn đo thêm 2–3 lượt để lưu, rồi đo và kết luận ngay". Thực tế: "Chưa lưu LINE CHUẨN (lượt 1/3)", `MaximumRuns` = 2, nên IO006 "không kết luận" và làm phiên không hoàn tất. Hoặc đo đủ 3 lượt chuẩn ngay trong phiên như popup nói, hoặc không tính bài đang lấy chuẩn là INVALID. Ngoài ra màn hình ghi "KHÔNG ĐẠT" trong khi log ghi "không kết luận", lại mâu thuẫn. Popup này được trả lời "Có" chỉ 1,5 s sau khi hiện (14:47:16 → 14:47:17,9): cần xác nhận có phải mặc định hoặc phím Enter từ popup QA trước đó lọt sang không.
+
+Bằng chứng: `session-C360_191126_0005\` (log, model.json, ảnh FRA, wav IO003/IO006/IO008).
+
 ## 4. File trong thư mục này
 
 - `HANDOFF.md`: file này
