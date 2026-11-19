@@ -285,6 +285,61 @@ Chủ yêu cầu: **"nếu bài đo không có tên BLE thì tự động kết 
 
 Bằng chứng: `session-C360_191126_0004\` (log, model.json, các wav IO004/IO006).
 
+## 6. Lần đo 13:41 do Claude tự chạy (`C360_191126_0004_134133109`, v1.5.5.1, config rev 6): danh sách lỗi
+
+Chủ: "bạn tự đo lại và tìm lỗi". BLE nối được ngay lần đầu (chuẩn bị BLE 8,9 s). Tổng 247 s.
+
+| Bài | Kết quả | Ghi chú |
+|---|---|---|
+| IO001 Echo/Reverb | KHÔNG ĐẠT (`ECHO_MISSING`) | reverb 210 ms, không có echo |
+| IO002 Di tần | ĐẠT | FBX không đổi di tần (−2,995 / −3,001 Hz) |
+| IO003 MIC khô / IO004 LINE IN / IO005 USB A / IO007 BT | ĐẠT | IO004 không cần A/B |
+| IO006 Mic thực tế | ĐO KHÔNG HỢP LỆ | có sweep, bị cổng SNR chặn (§6.2) |
+| IO008 Rè | ĐO KHÔNG HỢP LỆ | lượt 1 có sweep nhưng bị chặn, lượt 2 mất tín hiệu (§6.3) |
+| IO009 Gain trước hú | KHÔNG ĐẠT | FBX tắt/bật đều hú ở −27 dB, 118 Hz; FBX thêm +0,0 dB (yêu cầu ≥ 6) |
+| **Tổng** | **CHƯA ĐO ĐỦ, không gửi server** | dù đã có 2 bài FAIL (§6.5) |
+
+### 6.1 IO001: thiếu echo phải là FAIL, không phải "chưa xác định" → CODE APP
+
+> Chủ: "echo không có mà sao lại ghi chưa xác định phải báo fail chứ"
+
+- Lần 13:24 (rev 6): màn hình ghi "Echo chưa xác định: **nền IR cao**", kết luận **ĐO KHÔNG HỢP LỆ**. Lần 13:41: nền IR −62,9 / −62,7 dB, ra **FAIL `ECHO_MISSING`**. Cùng loa, cùng cấu hình, mà kết luận lúc INVALID lúc FAIL. Dữ liệu lần 13:24 đã bị app xóa ("Đã xóa dữ liệu phiên đo sai"), chỉ còn chữ trên màn hình.
+- Binary có nhánh `… chưa xác định: {nền IR cao | đuôi thu quá ngắn | đuôi thu bị cắt}`.
+- Config IO001: `ExpectEcho: true`, `MinimumEchoLevelDb: −45`, `MinimumEchoProminenceDb: 10`.
+- **Sửa:** `ExpectEcho` = true mà không thấy echo thì **FAIL** (ghi kèm "nền IR cao" trong finding nếu có), không xếp INVALID. Nếu muốn chắc thì đo lại tối đa `MaximumRuns`, hết lượt vẫn không thấy echo thì FAIL. Bằng chứng phụ: cùng IR đó app **vẫn phát hiện được reverb** (đuôi 168–210 ms, SNR đuôi 16–17 dB), nên echo ở mức −45 dB cũng phải thấy được nếu có.
+- Còn mở (§3 mục 5): echo bật (`6404=1`) mà vẫn không có echo. Mixer Console hiện ECHO **Wet = "—"** (không đọc được), nên xem lại tham số Wet của echo trên firmware C360.
+
+### 6.2 IO006 (cổng "Measurement Mic" = KT USB): mic thu tốt, cổng SNR chặn oan → CODE + CONFIG
+
+| Bản thu | Matched filter | SNR app (cả 5 s) | Trong đoạn sweep |
+|---|---|---|---|
+| IO006 lượt 1, lần thử cuối | **32,0 dB** | 4,7 dB | 9,0 dB |
+| IO006 lần thử 13:43:26 | 13 dB (không có sweep) | 1,3 dB | 2,2 dB |
+
+App kết luận: "SNR thu 12,0 dB < ngưỡng cấu hình 20,0 dB". Đây là §2.1, chưa sửa. Đề xuất config rev 7 (IO006/IO008 phát −24 → −6 dBFS) và sửa code cổng nhận tín hiệu bằng matched filter.
+
+### 6.3 Popup A/B làm người đo bấm sai, mất tín hiệu thật → CODE
+
+Trong IO006 người đo bấm A/B theo popup: 13:43:26 SNR 3,3 dB (mất sweep), 13:43:42 SNR 7,0 dB (có lại). IO008 lượt 1 (13:44:30) có sweep (matched filter 34 dB). **IO008 lượt 2 (13:44:55) mất hẳn** (matched filter 9 dB, −48,8 dBFS = nền). Sau đó IO009 (MIC IN 3/4) hú được, tức A/B lúc đó đang ở 3/4. Sáng nay IO008 lượt 2 cũng mất tín hiệu y hệt. Sửa theo §2.2: chỉ hỏi A/B khi matched filter không thấy excitation, popup ghi rõ chiều cần chuyển, không hỏi ở bài âm học khi có sweep.
+
+### 6.4 IO008 Rè: vẫn hiện hình FFT, và phần Rè chưa từng chạy → CODE
+
+> Chủ: "sao rè vẫn để hình FFT ???"
+
+- `FRA-IO008.png` và khung đồ thị vẫn là **đáp tuyến dBFS 1/24 octave** (§1.3 chưa làm trong v1.5.5.1).
+- Nặng hơn: stage `AcousticRubBuzz` phát **sweep 1,48 s** để kiểm tra tín hiệu (excitation giống IO006, 262 202 byte) và bị cổng SNR chặn, nên **pink + chirp rè không được phát**, log ghi "Chưa tính THD cho lượt này". Ảnh xuất lấy từ lượt 2 không có tín hiệu nên toàn nhiễu.
+- **Sửa:** (a) cổng nhận tín hiệu như §6.2; (b) IO008 xuất ảnh và hiện giao diện Ctrl+Shift+I → Rè Pink (bảng HF / P95 / sự kiện/s / peak-crest + envelope), màn hình chính hiện chirp; (c) nếu bước kiểm tra tín hiệu fail thì ảnh phải ghi rõ "KHÔNG CÓ TÍN HIỆU", đừng vẽ nhiễu như đáp tuyến.
+
+### 6.5 Phiên có FAIL vẫn không lên server → CODE + API (§3 mục 4)
+
+IO001 và IO009 KHÔNG ĐẠT, nhưng IO006/IO008 INVALID khiến tổng thành "CHƯA ĐO ĐỦ — KIỂM TRA TÍN HIỆU", và log ghi `[Server] Không gửi server: chỉ gửi kết quả Auto Test hoàn tất (PASS/FAIL)`. Chủ muốn thấy báo cáo trên server. Đề xuất: **có bài FAIL thì tổng là FAIL và gửi luôn** (liệt kê bài INVALID trong báo cáo); hoặc thêm trạng thái gửi "CHƯA HOÀN TẤT" lên `/report`.
+
+### 6.6 "Bấm đo lại có lúc bị ẩn màn hình": chưa tái hiện
+
+Bộ ghi trạng thái cửa sổ mỗi 0,7 s suốt lần chạy: cửa sổ chính luôn `visible=1, minimized=0`, 0,0 1366×728. Popup "Kết quả QA · ID tự tạo khi đo · C360" (13:41:23) và "Thông báo" hiện đúng. Lúc 13:45:29 có cửa sổ Sound (`rundll32 mmsys.cpl,,sounds`, cha là **explorer**, tức người dùng tự mở) lên trước. Cần chủ mô tả lại: bấm nút nào thì ẩn, ẩn là thu nhỏ, mất hẳn hay popup nằm sau cửa sổ chính. Nghi vấn: sau thay đổi kích thước cửa sổ ở v1.5.5.1, popup có thể không còn Owner hoặc Topmost nên bị cửa sổ chính toàn màn hình che.
+
+Bằng chứng: `session-C360_191126_0004-run2\` (log, model.json, control-readbacks, ảnh FRA, wav IO006/IO008 hai lượt, `IO001-MicEffects-excerpt.json`).
+
 ## 4. File trong thư mục này
 
 - `HANDOFF.md`: file này

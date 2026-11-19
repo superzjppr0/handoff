@@ -1,0 +1,28 @@
+[
+  {
+    "attempt": "attempt-1",
+    "Verdict": "FAIL",
+    "EchoDetected": false,
+    "ReverbDetected": true,
+    "ImpulseNoiseDb": -62.93924445690215,
+    "NoiseFloorDbFs": -58.02797513953776,
+    "DiffuseTailDurationMs": 167.6190476190476,
+    "DiffuseTailSnrDb": 17.18207464735711,
+    "Findings": [
+      "ECHO_MISSING: không thấy chuỗi echo đạt ngưỡng cấu hình."
+    ]
+  },
+  {
+    "attempt": "attempt-2",
+    "Verdict": "FAIL",
+    "EchoDetected": false,
+    "ReverbDetected": true,
+    "ImpulseNoiseDb": -62.69235279578397,
+    "NoiseFloorDbFs": -57.78401967263819,
+    "DiffuseTailDurationMs": 209.52380952380952,
+    "DiffuseTailSnrDb": 16.52451098283101,
+    "Findings": [
+      "ECHO_MISSING: không thấy chuỗi echo đạt ngưỡng cấu hình."
+    ]
+  }
+]
