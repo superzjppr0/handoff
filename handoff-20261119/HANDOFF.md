@@ -17,6 +17,17 @@ Hiện trạng v1.5.6: phiên `C360_191126_0006` có IO001 **KHÔNG ĐẠT**, nh
 
 Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
 
+### Kèm theo: ghi chú (note) gửi server chỉ ghi ngắn gọn LỖI
+
+> Chủ: "kết luận gửi lên server phần note chỉ ghi ngắn gọn lỗi thôi … (ở đây có thể là mất Echo, THD cao: 0.7%) ví dụ có hú cao thì cũng note còn như vậy thì không note. chủ yếu có lỗi mới note"
+
+- Note tự sinh khi gửi = danh sách **lỗi** ngắn, cách nhau bằng "; ", ví dụ: `Mất echo; THD cao 0,70%`. Có thể kèm mã bài nếu cần: `Mất echo (IO001); THD cao 0,70% (IO003)`.
+- **Chỉ ghi bài KHÔNG ĐẠT** (và tùy chủ: một cụm ngắn cho bài chưa đo được, ví dụ `Rè chưa đo được (mic xa)`).
+- **Không có lỗi thì note trống.** Không chép log, không ghi số của bài ĐẠT, không ghi "TÍN HIỆU ĐO THẤP" hay các ghi chú kỹ thuật.
+- **IO009 hú:** v1.5.5 đang "tự ghi hú mạnh vào ghi chú". Bài này cố ý tăng gain tới khi hú, nên lần nào cũng phân loại "hú mạnh" (51–63 dB trên nền trong mọi phiên hôm nay). Chỉ ghi khi **bất thường**, ví dụ hú ở gain thấp hơn ngưỡng cấu hình, hoặc FBX bật mà hú to hơn tắt. Mức hú như các phiên hôm nay thì **không ghi**.
+- Mẫu chữ lỗi: `Mất echo` · `Mất reverb` · `THD cao x,xx%` (kèm tần số nếu không phải 1 kHz) · `Lệch đáp tuyến (n điểm)` · `Rè/rung` · `Mất tín hiệu <ngõ>` · `Hú bất thường`.
+- Ghi chú người đo gõ tay ở popup "Kết quả QA" thì nối sau note tự sinh.
+
 ### Kèm theo: bấm vào bài INVALID → popup "Đo lại" (tăng âm lượng) → đo lại riêng bài đó → gửi server
 
 > Chủ: "bài rub buzz mà đo không hợp lệ thì có thể bấm lại vào và hiện lên pop up đo lại (sau khi tăng âm lượng window lên) đo lại và gửi lên server"
