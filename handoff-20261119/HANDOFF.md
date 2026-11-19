@@ -34,6 +34,19 @@ Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
   3. Mất mạng thì hàng đợi lưu xuống đĩa và gửi lại sau; popup cuối phiên ghi "đã gửi x/9 bài, tổng: …".
   4. Không làm việc nặng (xuất ảnh, nén, so QA, HTTP) trên luồng UI; thanh trạng thái hiện "Đang gửi nền…".
 
+### Ctrl+Shift+I → tab Rè đo thủ công lấy SAI ĐƯỜNG (đường của IO009 thay vì IO008) → CODE
+
+> Chủ: "bài IO008 hình như đang không có tiếng phát đường LINE IN của loa và thu vào Headphones (KT USB Audio) nhưng sao không có tín hiệu"
+
+- Auto Test 15:31 thì đúng: `AcousticRubBuzz-windows-levels.json` = output `Analog Connector 1/2 (7- FastTrack Pro)`, input `Measurement Mic (KT USB Audio)`, phát 100 %, thu 100 %. Mức thu −16,3 dBFS, SNR 27,9 dB, ĐẠT.
+- Sau phiên, Ctrl+Shift+I → **Rè (Rub & Buzz)** hiện: "**Chẩn đoán thủ công · IO009** · Ngõ phát **Analog Connector 3/4** (7- FastTrack Pro) / L+R · Ngõ thu Measurement Mic (KT USB Audio) / Trộn" và "THU KHÔNG HỢP LỆ · ĐO LẠI". Phần header của cửa sổ cũng lấy route `IO001_MIC_IN_TO_LINE_OUT`, ngõ phát 3/4.
+- Tức là đo Rè thủ công lấy **route của bài đang chọn hoặc bài cuối (IO009, MIC IN)**, không phải IO008 (LINE IN). Ngoài ra cuối phiên app đã "khôi phục trạng thái loa" (ngõ nhạc về Bluetooth, MASTER/MUSIC về mức cũ), nên phát vào LINE IN cũng không ra loa.
+- `Headphones (KT USB Audio)` là **ngõ ra tai nghe** của USB KT (render). Ngõ thu đúng là `Measurement Mic (KT USB Audio)` (capture `{eb67c99f…}`). Nên hiện tên rõ "ngõ ra" / "ngõ thu" để người đo khỏi nhầm.
+- **Sửa:**
+  1. Tab Rè có ô chọn **bài/route** (mặc định IO008 nếu model có bài `AcousticRubBuzz`).
+  2. Bấm "▶ Đo chuẩn / Chỉ Pink / Chỉ Chirp" thì **chuẩn bị loa như Auto Test**: qua BLE chuyển ngõ LINE IN, MIC mute, đặt `TestVolume` của IO008 (BLE MUSIC 70 %, Windows 100 %), rồi phát ra 1/2.
+  3. Thu "không hợp lệ" thì ghi rõ route đã dùng và lý do (mức thu, SNR).
+
 ### Đính chính §7.7
 - "Chọn model tự bắt đầu Auto Test": **không tái hiện** (15:27 chọn C360, app vẫn "ĐANG CHỜ…"). Lần trước có lẽ người ở trạm bấm đúng lúc.
 - "Popup LINE CHUẨN tự chọn Có sau 1,4 s": **không tái hiện** (15:29 popup đứng chờ, người đo bấm Có).
