@@ -1,0 +1,43 @@
+[2026-11-19 16:14:15.616] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu ở một ngõ thì app tự thử các ngõ sound card khác của cấu hình.
+[2026-11-19 16:14:15.631] [Auto Test] Bắt đầu C360_191126_0009 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 16:14:15.631] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:15.632] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:15.632] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:15.633] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:15.633] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:15.634] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:15.634] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:15.635] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 100% · MIC 50% · Windows phát 80% · thu 100%
+[2026-11-19 16:14:15.635] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 16:14:20.440] [BLE] KBEATBOX · 42:3E:3F:75:2E:7D | Ngõ loa báo hỗ trợ: Bluetooth, USB A, LINE IN, THẺ NHỚ (SD/TF) | Đã chuyển và đọc lại: LINE IN, USB A, Bluetooth | Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows | Sẽ đo: IO001 · IO002 · IO003 · IO004 · IO005 · IO006 · IO007 · IO008 · IO009 (tùy chọn) |  | Tự đóng và bắt đầu đo sau vài giây. · đã chuyển: LINE IN, USB A, Bluetooth
+[2026-11-19 16:14:26.081] [Âm lượng] Đã đặt MASTER DSP 99,61% → 50% qua BLE.
+[2026-11-19 16:14:26.082] [Âm lượng] Đã đặt MUSIC 99,61% → 50% qua BLE.
+[2026-11-19 16:14:36.234] [LINE CHUẨN] Người đo chọn tự lấy LINE CHUẨN từ loa đang đo rồi đo luôn.
+[2026-11-19 16:16:08.054] [Export] Saved FEQ screenshot: FRA-IO001.png
+[2026-11-19 16:16:08.055] [Auto Test] MIC IN · Echo / Reverb: 0/2 lượt đạt (cần 1/2). Echo/reverb chưa xác định: nền IR cao.
+[2026-11-19 16:17:03.838] [Auto Test] MIC IN · Di tần (FBX): 0/2 lượt đạt (cần 1/2). Di tần chưa xác định. FBX BẬT: 700 Hz: tần số chưa phù hợp clock chung / độ dịch Hz ổn định. FBX BẬT: 1700 Hz: tần số chưa phù hợp clock chung / độ dịch Hz ổn định. FBX BẬT: 3700 Hz: tần số chưa phù hợp clock chung / độ dịch Hz ổn định. FBX BẬT: 3700 Hz: mức tone -75,8 dBFS < -65 dBFS. FBX BẬT: 3700 Hz: SNR cục bộ 14,5 dB < 15 dB. Mức tone khi BẬT so với TẮT: 700 Hz -18,9 dB; 1700 Hz -2,8 dB; 3700 Hz -34,3 dB. Đã thu lại 1 lượt do bản thu chưa ổn định; vẫn chưa đủ chất lượng để kết luận di tần.
+[2026-11-19 16:17:21.255] [Export] Saved FEQ screenshot: FRA-IO003.png
+[2026-11-19 16:17:21.256] [Auto Test] MIC IN · Không effect: 0/2 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 1,590%  · 1000 Hz: 3,097%  · 4000 Hz: 0,465% · Mức thu -26,3 dBFS · SNR 30,7 dB LINE CHUẨN ±3 dB; Ngoài biên: 408/408 điểm (100%), cho phép ≤10% trong freq_range. Đáp tuyến lệch line chuẩn tối đa 17,16 dB.
+[2026-11-19 16:17:32.873] [Không có tín hiệu] IO004: mức thu -77,3 dBFS · SNR 0,0 dB — đã thử Analog Connector 3/4 (7- FastTrack Pro), Analog Connector 1/2 (7- FastTrack Pro); hỏi kiểm tra cáp LINE IN (lần 1).
+[2026-11-19 16:17:54.067] [Không có tín hiệu] IO004: người đo bấm Bỏ qua.
+[2026-11-19 16:17:55.337] [TestReview] Đang xem lại đáp tuyến và distortion của IO001 trong khung đồ thị chính.
+[2026-11-19 16:18:02.452] [Không có tín hiệu] IO004: mức thu -76,1 dBFS · SNR 1,7 dB — đã thử Analog Connector 3/4 (7- FastTrack Pro), Analog Connector 1/2 (7- FastTrack Pro); hỏi kiểm tra cáp LINE IN (lần 1).
+[2026-11-19 16:18:10.020] [Không có tín hiệu] IO004: người đo bấm Thử lại.
+[2026-11-19 16:18:18.496] [Không có tín hiệu] IO004: mức thu -76,2 dBFS · SNR 1,7 dB — đã thử Analog Connector 3/4 (7- FastTrack Pro), Analog Connector 1/2 (7- FastTrack Pro); hỏi kiểm tra cáp LINE IN (lần 2).
+[2026-11-19 16:18:33.777] [Không có tín hiệu] IO004: người đo bấm Thử lại.
+[2026-11-19 16:18:41.865] [Không có tín hiệu] IO004: mức thu -77,2 dBFS · SNR 0,5 dB — đã thử Analog Connector 3/4 (7- FastTrack Pro), Analog Connector 1/2 (7- FastTrack Pro); hỏi kiểm tra cáp LINE IN (lần 3).
+[2026-11-19 16:19:10.631] [Không có tín hiệu] IO004: người đo bấm Bỏ qua.
+[2026-11-19 16:19:10.909] [Export] Saved FEQ screenshot: FRA-IO004.png
+[2026-11-19 16:19:10.910] [Auto Test] LINE IN · Đáp tuyến / THD: 0/2 lượt đạt (cần 1/2). KHÔNG NHẬN ĐƯỢC TÍN HIỆU THỬ THU/PHÁT
+
+Ngõ phát: Analog Connector 1/2 (7- FastTrack Pro)
+Ngõ thu: LINE OUT (DAURIS_300 usb audio)
+Mức thu -77,2 dBFS · SNR 0,5 dB. Không nhận ra sweep trong bản thu.
+
+Kiểm tra đúng ngõ trên loa, dây nối, mute và mức âm lượng phát/thu rồi đo lại. Có nhiễu ở ngõ thu không có nghĩa là đã nhận được tín hiệu thử.
+
+Chưa tính THD cho lượt này.
+[2026-11-19 16:19:21.151] [Export] Saved FEQ screenshot: FRA-IO005.png
+[2026-11-19 16:19:21.152] [Auto Test] USB A · Đáp tuyến / THD: 1/1 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,247%  · 1000 Hz: 0,033%  · 4000 Hz: 0,030% · Mức thu -33,9 dBFS · SNR 27,6 dB
+TÍN HIỆU ĐO THẤP · RMS -33,9 dBFS · headroom 30,9 dB · SNR 27,6 dB. Tín hiệu cao hơn nền chưa tới 30 dB. Nhiễu có thể làm THD đo được tăng. Kiểm tra đúng ngõ, mức thu/gain và nền nhiễu; giữ đủ headroom để tránh clipping. Số THD vẫn được giữ nguyên. LINE CHUẨN ±3 dB; Ngoài biên: 1/408 điểm (0,25%), cho phép ≤10% trong freq_range. Đã đối chiếu LINE CHUẨN cùng cấu hình.
+[2026-11-19 16:19:31.246] [Không có tín hiệu] IO006: mức thu -44,1 dBFS · SNR 2,5 dB — đã thử Analog Connector 3/4 (7- FastTrack Pro), Analog Connector 1/2 (7- FastTrack Pro); hỏi kiểm tra cáp LINE IN (lần 1).

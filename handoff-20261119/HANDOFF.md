@@ -1,5 +1,30 @@
 # C360 — handoff 2026-11-19 (gửi Claude máy server / có source)
 
+## ⚠ ĐỔI DÂY Ở TRẠM (16:10): LINE IN = Analog 3/4, MIC IN = Analog 1/2. Config phải đổi theo
+
+> Chủ: "tôi đổi dây MIC IN với dây LINE IN tương ứng với 1/2 với 3/4 ấy, nhớ ghi lại vào handoff để đổi theo cách này"
+
+**Cách cắm mới (vật lý, từ 16:10 ngày 19/11):**
+
+| Ngõ loa C360 | Ngõ ra FastTrack Pro (trước) | Ngõ ra FastTrack Pro (**bây giờ**) |
+|---|---|---|
+| LINE IN | Analog Connector 1/2 | **Analog Connector 3/4** |
+| MIC IN | Analog Connector 3/4 | **Analog Connector 1/2** |
+
+**Config C360 cần đổi (đi qua `/settings`, duyệt rồi mới có hiệu lực; bản 11 hiện vẫn theo cách cũ):**
+```jsonc
+"Devices": { "Input": {
+  "LINE IN": "Analog Connector 3/4 (7- FastTrack Pro)",   // trước: 1/2
+  "MIC IN":  "Analog Connector 1/2 (7- FastTrack Pro)",   // trước: 3/4
+  "BLUETOOTH": "Headphones (5- KBEATBOX  Stereo)", "USB A": "CS3600 MUSIC" } }
+```
+Bài dùng LINE IN: IO004, IO006, IO008. Bài dùng MIC IN: IO001, IO002, IO003, IO009. LINE CHUẨN điện tử (IO003–IO005, IO007) có thể phải lấy lại nếu fingerprint chứa tên thiết bị phát.
+
+**Lỗi app v1.5.6 lộ ra khi đổi dây** (phiên `C360_191126_0009_161415608`, config bản 11 chưa đổi): tính năng "hai cáp cắm ngược thì tự đổi" **không bắt được**.
+- IO001–IO003 (phát 3/4, giờ vào LINE IN; loa đang ở ngõ Bluetooth, MIC bật): **vẫn thu được tín hiệu**, chỉ yếu và méo, nên app không coi là "không có tiếng" và không thử cặp kia. Kết quả: IO001 "Echo/reverb chưa xác định: nền IR cao" (INVALID), IO002 "Di tần chưa xác định" (tone 3700 Hz −75,8 dBFS), IO003 mức −26,3 dBFS (bình thường −12,2), THD 1 kHz 3,1 %, lệch LINE CHUẨN 408/408 điểm, tối đa 17 dB.
+- IO004 (LINE IN; BLE xác nhận ngõ = 4, MIC mute): "đã thử Analog Connector 3/4, Analog Connector 1/2", **cả hai −77 dBFS**, popup "kiểm tra cáp LINE IN". Đáng lẽ 3/4 phải có tiếng với cách cắm mới. Cần xem lại logic thử cặp (có giữ nguyên trạng thái loa và mức Windows khi thử cặp thứ hai không, hoặc có bị khóa cặp đã "chốt" từ các bài MIC trước không).
+- **Đề xuất:** đầu phiên (sau bước BLE) chạy **một lần dò đường** ngắn: loa ở ngõ LINE IN và MIC mute, phát burst 0,3 s lần lượt ra 1/2 và 3/4, thu LINE OUT, dùng matched filter. Cặp nào có tiếng là LINE IN, cặp còn lại là MIC IN. Ghi vào log và popup "Đã kiểm tra ngõ" là "LINE IN = 3/4 · MIC IN = 1/2 (khác config → đã tự đổi)". Không suy ra từ việc bài MIC "có chút tín hiệu".
+
 ## ⚠ VIỆC GẤP NHẤT (15:15): có 1 bài KHÔNG ĐẠT thì kết luận KHÔNG ĐẠT và GỬI SERVER
 
 > Chủ (nhắc lần 3): "1 bài không đạt là app phải kết luận không đạt rồi gửi lên server được rồi"
