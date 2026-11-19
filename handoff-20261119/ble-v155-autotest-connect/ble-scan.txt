@@ -1,0 +1,49 @@
+# BLE advertisement scan, Windows BluetoothLEAdvertisementWatcher (Active), 2026-11-19 11:01:55 giờ VN
+# Dòng thụt đầu = gói quảng bá thô của thiết bị có dịch vụ 0x5343 (AD type:hex(ascii)). Speaker C360 đang test = 423E3F752E7D.
+  75063FC72300 ConnectableUndirected rssi=-102 01:02(.) 03:4353(CS) FF:4D5675063FC72300074000CE(MVu.?.#..@..)
+  45283F31A0FF ConnectableUndirected rssi=-88 01:18(.) 03:4353(CS) FF:534345283F31A0FF04420173(SCE(?1...B.s)
+  738C2A0BC50E ConnectableUndirected rssi=-90 01:02(.) 03:4353(CS) FF:4D56738C2A0BC50E0728003F(MVs.*....(.?)
+  423E3F752E7D ConnectableUndirected rssi=-46 01:18(.) 03:4353(CS) FF:5343423E3F752E7D043301FB(SCB>?u.}.3..)
+  423E3F752E7D ScanResponse rssi=-46 
+  423E3F752E7D ScanResponse rssi=-46 
+  423E3F752E7D ConnectableUndirected rssi=-44 01:18(.) 03:4353(CS) FF:5343423E3F752E7D043301FB(SCB>?u.}.3..)
+  423E3F752E7D ScanResponse rssi=-44 
+  45283F31A0FF ConnectableUndirected rssi=-74 01:18(.) 03:4353(CS) FF:534345283F31A0FF04420173(SCE(?1...B.s)
+  423E3F752E7D ConnectableUndirected rssi=-44 01:18(.) 03:4353(CS) FF:5343423E3F752E7D043301FB(SCB>?u.}.3..)
+  423E3F752E7D ScanResponse rssi=-44 
+  738C2A0BC50E ConnectableUndirected rssi=-90 01:02(.) 03:4353(CS) FF:4D56738C2A0BC50E0728003F(MVs.*....(.?)
+  423E3F752E7D ConnectableUndirected rssi=-46 01:18(.) 03:4353(CS) FF:5343423E3F752E7D043301FB(SCB>?u.}.3..)
+  423E3F752E7D ScanResponse rssi=-46 
+  45283F31A0FF ConnectableUndirected rssi=-80 01:18(.) 03:4353(CS) FF:534345283F31A0FF04420173(SCE(?1...B.s)
+  423E3F752E7D ConnectableUndirected rssi=-44 01:18(.) 03:4353(CS) FF:5343423E3F752E7D043301FB(SCB>?u.}.3..)
+  738C2A0A0A0A ConnectableUndirected rssi=-82 01:02(.) 03:4353(CS) FF:4D56738C2A0A0A0A07280021(MVs.*....(.!)
+Status=Stopped  devices=27
+Watcher stopped: Success
+423E3F752E7D  rssi= -44  n= 10  name=""  svc=00005343
+0F3581230AC8  rssi= -48  n=  6  name=""  svc=
+2B3AA5FBEA4A  rssi= -66  n=  6  name=""  svc=
+F26272995A96  rssi= -70  n=  1  name=""  svc=
+6084123DC9B9  rssi= -72  n=  4  name=""  svc=
+45283F31A0FF  rssi= -74  n=  6  name=""  svc=00005343
+7352241089CE  rssi= -76  n=  4  name=""  svc=
+7878997C1493  rssi= -76  n=  5  name=""  svc=
+E950821B9981  rssi= -80  n=  2  name=""  svc=
+7310CF37603A  rssi= -80  n=  2  name=""  svc=0000fef3
+C7F7108852FA  rssi= -80  n=  2  name=""  svc=
+6DF7F8A672C8  rssi= -80  n=  3  name=""  svc=0000fef3
+738C2A0A0A0A  rssi= -82  n=  2  name=""  svc=00005343
+4B42B2CB48F9  rssi= -84  n=  5  name=""  svc=
+542EE9EE9452  rssi= -86  n=  2  name=""  svc=0000fef3
+F438B2FB9150  rssi= -86  n=  1  name=""  svc=
+F4482F3C339B  rssi= -88  n=  2  name=""  svc=
+508A066AE2EC  rssi= -90  n=  1  name=""  svc=0000a201
+738C2A0BC50E  rssi= -90  n=  4  name=""  svc=00005343
+56E16043CFDB  rssi= -92  n=  2  name=""  svc=
+5DBF6908EEF3  rssi= -92  n=  4  name=""  svc=
+7FD90F97196D  rssi= -94  n=  5  name=""  svc=
+50D6ABDBA06F  rssi= -94  n=  2  name=""  svc=
+42CA2394F762  rssi= -96  n=  1  name=""  svc=0000fef3
+4ED2EAF8EC7F  rssi= -96  n=  4  name=""  svc=
+14C8280F56A2  rssi=-100  n=  4  name=""  svc=
+75063FC72300  rssi=-102  n=  2  name=""  svc=00005343
+423E3F752E7D: name="Bluetooth 42:3e:3f:75:2e:7d" status=Disconnected

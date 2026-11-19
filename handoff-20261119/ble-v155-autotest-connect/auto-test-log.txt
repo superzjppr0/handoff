@@ -1,0 +1,48 @@
+[2026-11-19 10:49:53.935] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu khi đo thì app sẽ nhắc bấm A/B.
+[2026-11-19 10:49:53.945] [Auto Test] Bắt đầu C360_191126_0002 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 10:49:53.946] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.946] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.947] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.948] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.948] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.948] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.948] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.949] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:53.949] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:49:58.032] [Auto Test] Chưa kết nối được loa BLE có tên bắt đầu bằng "KBEATBOX" và đúng model 1075. Bật loa, đặt gần máy đo rồi bấm đo lại. (InvalidOperationException)
+[2026-11-19 10:50:05.785] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu khi đo thì app sẽ nhắc bấm A/B.
+[2026-11-19 10:50:05.799] [Auto Test] Tiếp tục C360_191126_0002 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 10:50:05.799] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.800] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.800] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.800] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.801] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.801] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.801] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.802] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:05.802] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:09.855] [Auto Test] Chưa kết nối được loa BLE có tên bắt đầu bằng "KBEATBOX" và đúng model 1075. Bật loa, đặt gần máy đo rồi bấm đo lại. (InvalidOperationException)
+[2026-11-19 10:50:17.458] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu khi đo thì app sẽ nhắc bấm A/B.
+[2026-11-19 10:50:17.466] [Auto Test] Tiếp tục C360_191126_0002 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 10:50:17.467] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.467] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.467] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.468] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.468] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.469] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.469] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.469] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:17.469] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:50:21.517] [Auto Test] Chưa kết nối được loa BLE có tên bắt đầu bằng "KBEATBOX" và đúng model 1075. Bật loa, đặt gần máy đo rồi bấm đo lại. (InvalidOperationException)
+[2026-11-19 10:56:44.415] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu khi đo thì app sẽ nhắc bấm A/B.
+[2026-11-19 10:56:44.428] [Auto Test] Tiếp tục C360_191126_0002 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 10:56:44.429] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.430] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.430] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.431] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.432] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.433] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.433] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.434] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:44.434] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 10:56:48.515] [Auto Test] Chưa kết nối được loa BLE có tên bắt đầu bằng "KBEATBOX" và đúng model 1075. Bật loa, đặt gần máy đo rồi bấm đo lại. (InvalidOperationException)

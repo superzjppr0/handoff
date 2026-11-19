@@ -1,0 +1,149 @@
+{
+  "settings": {
+    "StartGainDb": -30,
+    "MaximumGainDb": 24,
+    "StepDb": 1,
+    "StepSeconds": 0.25,
+    "HowlMarginDb": 25,
+    "HowlLevelDbFs": -35,
+    "MinimumAddedDb": null
+  },
+  "result": {
+    "Off": {
+      "FbxEnabled": false,
+      "HowlGainDb": -28,
+      "HowlFrequencyHz": 118.4326171875,
+      "PeakDbFs": -26.78005032522284,
+      "Steps": [
+        {
+          "GainDb": -30,
+          "LevelDbFs": -45.0374551892186,
+          "PeakToMedianDb": 30.598989460418817,
+          "PeakHz": 139.9658203125
+        },
+        {
+          "GainDb": -30,
+          "LevelDbFs": -41.1325247786679,
+          "PeakToMedianDb": 37.79438521771572,
+          "PeakHz": 75.3662109375
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -37.67583857331778,
+          "PeakToMedianDb": 31.509698997676168,
+          "PeakHz": 129.19921875
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -38.51860664937321,
+          "PeakToMedianDb": 36.18778766798482,
+          "PeakHz": 118.4326171875
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -41.045331642012535,
+          "PeakToMedianDb": 32.1883829939702,
+          "PeakHz": 107.666015625
+        },
+        {
+          "GainDb": -28,
+          "LevelDbFs": -39.64543222738784,
+          "PeakToMedianDb": 36.60115289309534,
+          "PeakHz": 107.666015625
+        },
+        {
+          "GainDb": -28,
+          "LevelDbFs": -33.771519306508395,
+          "PeakToMedianDb": 43.176015658788984,
+          "PeakHz": 118.4326171875
+        },
+        {
+          "GainDb": -28,
+          "LevelDbFs": -30.46039772288431,
+          "PeakToMedianDb": 51.42629772609898,
+          "PeakHz": 118.4326171875
+        },
+        {
+          "GainDb": -28,
+          "LevelDbFs": -26.78005032522284,
+          "PeakToMedianDb": 49.43431925937605,
+          "PeakHz": 118.4326171875
+        },
+        {
+          "GainDb": -28,
+          "LevelDbFs": -33.58849589994566,
+          "PeakToMedianDb": 41.674538117835986,
+          "PeakHz": 118.4326171875
+        },
+        {
+          "GainDb": -28,
+          "LevelDbFs": -34.57683453420255,
+          "PeakToMedianDb": 49.616964861851955,
+          "PeakHz": 118.4326171875
+        }
+      ],
+      "Howled": true
+    },
+    "On": {
+      "FbxEnabled": true,
+      "HowlGainDb": -29,
+      "HowlFrequencyHz": 118.4326171875,
+      "PeakDbFs": -34.34103606648676,
+      "Steps": [
+        {
+          "GainDb": -30,
+          "LevelDbFs": -36.51590379754641,
+          "PeakToMedianDb": 49.00109919947546,
+          "PeakHz": 118.4326171875
+        },
+        {
+          "GainDb": -30,
+          "LevelDbFs": -34.50555480782623,
+          "PeakToMedianDb": 43.40005461112446,
+          "PeakHz": 107.666015625
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -34.34103606648676,
+          "PeakToMedianDb": 41.730532203415265,
+          "PeakHz": 118.4326171875
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -34.388691079778795,
+          "PeakToMedianDb": 43.10793265419082,
+          "PeakHz": 107.666015625
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -38.00615184718641,
+          "PeakToMedianDb": 35.209373995594724,
+          "PeakHz": 129.19921875
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -37.07486687537824,
+          "PeakToMedianDb": 38.885018632039824,
+          "PeakHz": 129.19921875
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -38.36005417112111,
+          "PeakToMedianDb": 34.746175078759045,
+          "PeakHz": 129.19921875
+        },
+        {
+          "GainDb": -29,
+          "LevelDbFs": -42.44136290999979,
+          "PeakToMedianDb": 37.35183012348923,
+          "PeakHz": 129.19921875
+        }
+      ],
+      "Howled": true
+    },
+    "MaximumGainDb": 24,
+    "AddedDb": -1,
+    "AddedIsLowerBound": false
+  },
+  "AddedDb": -1
+}
