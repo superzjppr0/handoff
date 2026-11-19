@@ -47,6 +47,26 @@ Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
   2. Bấm "▶ Đo chuẩn / Chỉ Pink / Chỉ Chirp" thì **chuẩn bị loa như Auto Test**: qua BLE chuyển ngõ LINE IN, MIC mute, đặt `TestVolume` của IO008 (BLE MUSIC 70 %, Windows 100 %), rồi phát ra 1/2.
   3. Thu "không hợp lệ" thì ghi rõ route đã dùng và lý do (mức thu, SNR).
 
+### Bài Rè phải HIỆN RÕ NGÕ PHÁT / NGÕ THU + lỗi đo Rè thủ công (Claude đo lại 15:57–15:59) → CODE
+
+> Chủ: "bài Rè (Rub & Buzz) phải hiện ngõ phát ngõ thu để khỏi nhầm lẫn và đo lại Rub Buzz với ngõ thu Measurement Mic"
+
+**Nhầm lẫn thực tế ở trạm:** người đo chọn ô **"Nghe qua: Headphones (KT USB Audio)"** trong tab Rè, tưởng đó là ngõ thu. Thực ra "Nghe lại / Nghe qua" chỉ để **phát lại** bản đã thu. Danh sách bài đo cũng ghi "IN: LINE IN · OUT: Measurement Mic" (IN/OUT theo góc nhìn loa), rất dễ hiểu ngược.
+
+**Đặc tả hiển thị (danh sách bài, khung DISTORTION, tab Rè Ctrl+Shift+I, ảnh `FRA-IO008.png`, báo cáo server):**
+`PHÁT → LINE IN loa · Analog Connector 1/2 (FastTrack Pro)   |   THU ← Measurement Mic (KT USB Audio)`
+- Tab Rè: một dòng to, cố định ngay dưới tiêu đề. Nếu ngõ không khớp bài (ví dụ đang 3/4 trong khi IO008 cần 1/2) thì **tô đỏ và chặn nút Đo**.
+- Đổi nhãn "Nghe qua" thành **"Nghe lại bản thu qua (loa/tai nghe kiểm tra)"**, tách sang khung riêng "NGHE LẠI", không liệt kê thiết bị đang dùng để đo.
+- Danh sách bài: đổi "IN: … · OUT: …" thành "PHÁT → … · THU ← …".
+
+**Lỗi tìm thấy khi đo Rè thủ công đúng đường IO008** (Claude tự chỉnh loa qua Ctrl+Shift+H: LINE IN, MIC tắt, MASTER 50 %, MUSIC 70 %; Audio Routing phát 1/2, thu Measurement Mic; xong trả loa về như cũ):
+1. **Ngõ đo thủ công lấy từ `ComboPlayback` của bảng Audio Routing**, không lấy theo bài. Bấm đúp IO008 thì header đổi sang `IO008_LINE_IN_TO_Measurement_Mic` / 1/2, nhưng vài giây sau quay lại 3/4 theo `ComboPlayback`. Nhãn "Chẩn đoán thủ công · IO008" vẫn hiện trong khi phát ra 3/4. Đây là nguyên nhân người đo thấy "không có tín hiệu" hoặc "Clipping ngõ thu" (phát vào MIC IN).
+2. Đo thủ công **không chuẩn bị loa** ("không đổi BLE/mixer"). Sau Auto Test, loa đã được trả về Bluetooth, MASTER/MUSIC 99,6 %, MIC bật. Nên có nút "Chuẩn bị loa như IO008" (LINE IN, MIC mute, `TestVolume`).
+3. **"▶ Đo chuẩn · Pink + Chirp (3 lượt)" chỉ chạy Chirp**: xong 40 s, mục Pink vẫn "Chưa có kết quả Pink". Phải bấm riêng "Chỉ Pink".
+4. **Pink ra số âm và rất dao động:** "rè lặp lại **−3,2 %**", từng cặp lượt **−43,3 % / 14,7 % / 18,9 %** (độ nhạy 50,5 dB, bản thu hợp lệ). Cần xem lại công thức (kẹp ≥ 0? lấy trung vị?), vì Auto Test IO008 chỉ đo một lần và cho 29,4 %, sát ngưỡng 30 %.
+5. **Ngưỡng thủ công ≠ Auto Test:** thủ công Pink PASS ≤ 15 % / FAIL ≥ 30 %, Chirp PASS ≤ 6 dB / FAIL ≥ 10 dB. Auto Test: Pink < 30 %, Chirp < 10 dB. Phải dùng cùng một bộ ngưỡng (lấy từ config).
+6. **Chirp:** lần đo 15:57 cho 0,0 dB @ 23 Hz (đường phẳng, giống ảnh Auto Test), lần 15:58 cho **3,7 dB @ 1652 Hz**, HF vượt nền 7,6 dB. Đường phẳng 0,0 dB có lẽ là giá trị bị kẹp hoặc chưa đủ độ nhạy ("MÉO XUNG — không đủ độ nhạy"), không nên vẽ như kết quả thật.
+
 ### Đính chính §7.7
 - "Chọn model tự bắt đầu Auto Test": **không tái hiện** (15:27 chọn C360, app vẫn "ĐANG CHỜ…"). Lần trước có lẽ người ở trạm bấm đúng lúc.
 - "Popup LINE CHUẨN tự chọn Có sau 1,4 s": **không tái hiện** (15:29 popup đứng chờ, người đo bấm Có).
