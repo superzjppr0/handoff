@@ -1,5 +1,22 @@
 # C360 — handoff 2026-11-19 (gửi Claude máy server / có source)
 
+## ⚠ VIỆC GẤP NHẤT (15:15): có 1 bài KHÔNG ĐẠT thì kết luận KHÔNG ĐẠT và GỬI SERVER
+
+> Chủ (nhắc lần 3): "1 bài không đạt là app phải kết luận không đạt rồi gửi lên server được rồi"
+
+Hiện trạng v1.5.6: phiên `C360_191126_0006` có IO001 **KHÔNG ĐẠT**, nhưng vì IO008 INVALID nên tổng thành "CHƯA ĐO ĐỦ — KIỂM TRA TÍN HIỆU", log ghi `[Server] Không gửi server: chỉ gửi kết quả Auto Test hoàn tất (PASS/FAIL).` Cả ngày 19/11 chưa có phiên C360 nào lên FACTORY FLOOR QA. Trạm không đổi được luật này (không có config), phải sửa code.
+
+**Đặc tả:**
+1. Tổng = **KHÔNG ĐẠT** khi có ≥ 1 bài **bắt buộc** KHÔNG ĐẠT. Bài tùy chọn (IO009) không tính và hiện **xám**.
+2. Tổng = **ĐẠT** chỉ khi mọi bài bắt buộc ĐẠT.
+3. Không có bài nào KHÔNG ĐẠT nhưng còn bài INVALID hoặc chưa kết luận: tổng = "CHƯA ĐO ĐỦ" (giữ như cũ, không gửi; hoặc gửi trạng thái chưa hoàn tất nếu chủ muốn).
+4. Tổng KHÔNG ĐẠT thì **gửi ngay cuối phiên** (FACTORY FLOOR QA & APP TRACKER + Quy trình QA/QC). Báo cáo ghi kèm từng bài INVALID hoặc chưa kết luận và lý do (ví dụ "IO008 Pink INVALID: độ nhạy 41,9 dB < 45 dB"). Không chờ người đo bấm TIẾP TỤC.
+5. Nếu sau đó bấm TIẾP TỤC và bài INVALID có kết luận: **cập nhật cùng bản ghi** (cùng serial / mã phiên), không tạo bản ghi mới.
+6. Popup cuối phiên ghi rõ: "Đã gửi server: KHÔNG ĐẠT — IO001 (thiếu echo)…" kèm mã log.
+7. Bài đang "tự lấy LINE CHUẨN chưa xong" (IO006) không được hiện là "KHÔNG ĐẠT" (màn hình hiện KHÔNG ĐẠT, log ghi "không kết luận"). Phải thống nhất là chưa kết luận, và không tính vào luật 1.
+
+Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
+
 Đọc kèm handoff trước: `..\handoff-20261118\HANDOFF.md`. File này ghi những gì mới từ trạm đo sáng 19/11. Mọi việc bên dưới đều cần **source hiện tại** (trạm đo chỉ có source cũ 16/10) hoặc **web `/settings` + duyệt** (config có chữ ký, sửa tại trạm sẽ bị ghi đè).
 
 ## TỔNG HỢP YÊU CẦU (đọc phần này trước)
