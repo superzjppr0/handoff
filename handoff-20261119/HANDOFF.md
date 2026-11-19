@@ -17,6 +17,23 @@ Hiện trạng v1.5.6: phiên `C360_191126_0006` có IO001 **KHÔNG ĐẠT**, nh
 
 Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
 
+### Kèm theo: bấm vào bài INVALID → popup "Đo lại" (tăng âm lượng) → đo lại riêng bài đó → gửi server
+
+> Chủ: "bài rub buzz mà đo không hợp lệ thì có thể bấm lại vào và hiện lên pop up đo lại (sau khi tăng âm lượng window lên) đo lại và gửi lên server"
+
+Hiện trạng v1.5.6: bấm vào bài trong "Danh sách bài đo tự động" chỉ mở xem lại (`[TestReview]`). Muốn đo lại thì chỉ có TIẾP TỤC chung. App tự đặt âm lượng Windows theo config ở đầu mỗi lượt (`AcousticRubBuzz-windows-levels.json`: `playbackPercent 75`, `recordingPercent 100`), nên người đo tăng tay cũng bị kéo về 75 %.
+
+Đặc tả:
+1. Bấm vào bài **ĐO KHÔNG HỢP LỆ** (hoặc chưa kết luận) thì hiện popup **"Đo lại IO008"**, gồm:
+   - lý do INVALID (ví dụ "Pink: độ nhạy 41,9 dB < 45 dB");
+   - mức hiện tại: Windows phát 75 % / thu 100 %, BLE MASTER/MUSIC 50 %, `Playback Level dBFS`;
+   - ô chỉnh **Windows phát (%)** (và BLE %) chỉ cho lần đo lại này, mặc định gợi ý +15–25 %, có giới hạn trên để tránh clip;
+   - nút **Đo lại** / **Hủy**.
+2. Đo lại **chỉ bài đó** với mức vừa chỉnh (không bị config ghi đè trong lần này). Ghi vào log và báo cáo: "đo lại IO008 với Windows phát 95 % (config 75 %)".
+3. Có kết luận thì tính lại tổng theo luật ở trên rồi **gửi server** (hoặc cập nhật bản ghi đã gửi).
+4. Áp dụng cho mọi bài INVALID, không riêng Rè. Bài ĐẠT/KHÔNG ĐẠT thì bấm vào vẫn chỉ xem lại.
+5. (Tùy chủ) Lần đo lại thành công với mức mới thì gợi ý "Lưu mức này vào config?" và đi qua luồng gửi duyệt web như thường.
+
 Đọc kèm handoff trước: `..\handoff-20261118\HANDOFF.md`. File này ghi những gì mới từ trạm đo sáng 19/11. Mọi việc bên dưới đều cần **source hiện tại** (trạm đo chỉ có source cũ 16/10) hoặc **web `/settings` + duyệt** (config có chữ ký, sửa tại trạm sẽ bị ghi đè).
 
 ## TỔNG HỢP YÊU CẦU (đọc phần này trước)
