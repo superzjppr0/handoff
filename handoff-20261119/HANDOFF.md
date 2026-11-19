@@ -258,6 +258,33 @@ Thứ tự chọn loa khi bắt đầu Auto Test:
 
 Bằng chứng: `ble-v155-autotest-connect\` (`auto-test-log.txt` + `model.json` của phiên `C360_191126_0002`, `ble-scan.txt` quét BLE lúc 11:01).
 
+### 5.3 Cập nhật 13:30: v1.5.5.1 + config C360 **rev 6** (`BleNamePrefix` = trống), phiên `C360_191126_0004`
+
+Chủ đã bỏ trống tiền tố trên web (rev 6, `cmwn5wt7k000932mbwj28ulk4`). v1.5.5.1 chỉ đổi chiều cao cửa sổ, **chưa có sửa §5.2**.
+
+**BLE khi tiền tố trống: chưa tự nối loa mạnh nhất.**
+```
+13:24:05.050 Chưa kết nối được điều khiển BLE của loa. Mở Ctrl+Shift+H để kiểm tra đúng loa trước khi đo.   ← 0,2 s sau khi bấm, không quét
+13:24:28.804 Chưa khôi phục được ngõ BLE trước đo; dừng Auto Test.
+13:24:47.551 Tiếp tục C360_191126_0004 …   ← lần 3 mới chạy (nhiều khả năng do người đo tự nối ở Ctrl+Shift+H)
+```
+Chủ yêu cầu: **"nếu bài đo không có tên BLE thì tự động kết nối với thiết bị có mức mạnh nhất"**. Tiền tố trống thì quét 4 s, lấy các thiết bị có dịch vụ Sonca 0x5343, xếp theo RSSI, nối loa mạnh nhất và đọc INFO. Khớp `FirmwareModelId` (C360 = 1075) thì đo; không khớp thì thử loa mạnh kế tiếp. Có thể lọc sẵn theo mã model trong manufacturer data (`…0433…`) để khỏi phải nối thử. Loa đang nối sẵn mà INFO khớp thì dùng luôn (§5.2 bước 1).
+
+**IO006 Mic thực tế: vẫn INVALID vì lỗi §2.1, phiên này xác nhận lại.** IO001–IO005 chạy xong (IO005 USB A FAIL: lệch line chuẩn 4,88 dB, 2/408 điểm). IO006 hỏi A/B 8 lần.
+
+| Bản thu (`continue-2\attempt-*\AcousticMic-*`) | Matched filter peak/rms | SNR app (RMS cả 5 s so với nền) | Trong đoạn sweep so với nền |
+|---|---|---|---|
+| IO004 LINE IN (−6 dBFS → LINE OUT) để so | 74,2 dB | 39,3 dB | 44,6 dB |
+| IO006 lượt 1, lần thử cuối | **33,7 dB, có sweep** | **7,1 dB** (app báo 7,2–8,7) | 11,4 dB |
+| IO006 lượt 2, lần thử cuối 13:29:21 | 11,0 dB, không có sweep | 0,7 dB | 1,2 dB |
+
+- Mic KT thu được sweep. Nhưng IO006 phát **−24 dBFS** (IO004 phát −6), và `MinimumSnrDb` = 20 lại tính trên RMS cả bản thu 5 s, trong khi sweep chỉ dài 1,48 s. Vì vậy cổng chặn oan.
+- Popup A/B **gây hại**: lần thử cuối mất sweep, tức người đo đã bấm A/B rời khỏi 1/2 (đúng như §2.2 cảnh báo).
+- **Config rev 7 (đề xuất cho chủ):** IO006 và IO008 `Playback Level dBFS` −24 → **−6** (bằng IO004, loa không to hơn bài LINE IN). SNR dự kiến khoảng 25 dB, qua ngưỡng 20. Không nên hạ `MinimumSnrDb`: ở SNR 7–11 dB, THD bị nền ồn chi phối nên không có nghĩa.
+- **Code (§2.1, §2.2):** cổng nhận tín hiệu cho `AcousticMic`/`AcousticRubBuzz` dùng matched filter, hoặc ít nhất SNR trong đoạn sweep. Popup A/B chỉ hiện khi matched filter không thấy excitation.
+
+Bằng chứng: `session-C360_191126_0004\` (log, model.json, các wav IO004/IO006).
+
 ## 4. File trong thư mục này
 
 - `HANDOFF.md`: file này

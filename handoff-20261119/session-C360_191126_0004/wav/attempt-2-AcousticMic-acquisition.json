@@ -1,0 +1,19 @@
+{
+  "AnalogPlaybackId": "{0.0.0.00000000}.{2abb5726-7827-46ad-8806-6834807c5f8f}",
+  "UsbPlaybackId": "{0.0.0.00000000}.{2abb5726-7827-46ad-8806-6834807c5f8f}",
+  "LineOutCaptureId": "{0.0.1.00000000}.{eb67c99f-bc70-435c-9d6b-2323e184f2c8}",
+  "SampleRate": 44100,
+  "SweepSeconds": 1.486077097505669,
+  "LevelDbFs": -24,
+  "AnalogPlaybackChannel": null,
+  "CaptureChannel": null,
+  "ThdLimitPercent": 0.5,
+  "LinePlaybackId": "{0.0.0.00000000}.{2abb5726-7827-46ad-8806-6834807c5f8f}",
+  "LineLevelDbFs": -24,
+  "UsbLevelDbFs": -24,
+  "BleControllerAddress": 72835120049789,
+  "UsbPlaybackName": "CS3600 MUSIC",
+  "BluetoothPlaybackId": "{0.0.0.00000000}.{2abb5726-7827-46ad-8806-6834807c5f8f}",
+  "BluetoothPlaybackName": "Headphones (5- KBEATBOX  Stereo)",
+  "BluetoothAutoPair": true
+}

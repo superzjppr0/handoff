@@ -1,0 +1,66 @@
+[2026-11-19 13:24:04.851] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu khi đo thì app sẽ nhắc bấm A/B.
+[2026-11-19 13:24:04.865] [Auto Test] Bắt đầu C360_191126_0004 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 13:24:04.865] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.866] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.867] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.867] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.868] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.868] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.868] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.869] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:04.869] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:05.050] [Auto Test] Chưa kết nối được điều khiển BLE của loa. Mở Ctrl+Shift+H để kiểm tra đúng loa trước khi đo. (InvalidOperationException)
+[2026-11-19 13:24:22.195] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu khi đo thì app sẽ nhắc bấm A/B.
+[2026-11-19 13:24:22.206] [Auto Test] Tiếp tục C360_191126_0004 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 13:24:22.206] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.206] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.207] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.207] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.207] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.208] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.208] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.208] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:22.209] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:28.804] [Auto Test] Chưa khôi phục được ngõ BLE trước đo; dừng Auto Test. (InvalidOperationException)
+[2026-11-19 13:24:36.823] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu khi đo thì app sẽ nhắc bấm A/B.
+[2026-11-19 13:24:36.834] [Auto Test] Tiếp tục C360_191126_0004 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 13:24:36.835] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.835] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.836] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.836] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.837] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.837] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.837] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.838] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:36.838] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 13:24:47.527] [Âm lượng] Đã đặt MASTER DSP 99,61% → 50% qua BLE.
+[2026-11-19 13:24:47.528] [Âm lượng] Đã đặt MUSIC 99,61% → 50% qua BLE.
+[2026-11-19 13:24:47.551] [Auto Test] Tiếp tục C360_191126_0004; giữ 0 bài hoàn tất, đo tiếp 9 bài.
+[2026-11-19 13:24:49.875] [LINE CHUẨN] Người đo chọn tự lấy LINE CHUẨN từ loa đang đo rồi đo luôn.
+[2026-11-19 13:25:11.066] [Export] Saved FEQ screenshot: FRA-IO001.png
+[2026-11-19 13:25:11.066] [Auto Test] MIC IN · Echo / Reverb: 0/2 lượt đạt (cần 1/2). Có reverb trong bản thu (đuôi liên tục 168 ms). Chưa phát hiện echo trong bản thu. Thiếu echo yêu cầu Chưa có LINE CHUẨN khớp cấu hình hiện tại. Chấm theo kỳ vọng của bài đo.
+[2026-11-19 13:25:31.529] [Auto Test] MIC IN · Di tần (FBX): 1/1 lượt đạt (cần 1/2). GHI CHÚ: FBX bật/tắt KHÔNG làm đổi di tần (bật -3,003 Hz, tắt -3,000 Hz). Có di tần trong đường MIC: FBX BẬT -3,003 ±0,15 Hz; TẮT -3,000 ±0,15 Hz. Thay đổi BẬT − TẮT -0,002 ±0,15 Hz; chưa thấy di tần thay đổi theo nút FBX. Mức tone khi BẬT so với TẮT: 700 Hz -19,0 dB; 1700 Hz -19,8 dB; 3700 Hz -34,2 dB. Phép đo này chưa đánh giá khả năng dập tiếng hú thực tế. Chưa có LINE CHUẨN khớp cấu hình hiện tại. Chấm theo kỳ vọng của bài đo.
+[2026-11-19 13:25:40.685] [Export] Saved FEQ screenshot: FRA-IO003.png
+[2026-11-19 13:25:40.686] [Auto Test] MIC IN · Không effect: 1/1 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,931%  · 1000 Hz: 0,443%  · 4000 Hz: 0,126% · Mức thu -12,2 dBFS · SNR 45,5 dB LINE CHUẨN ±3 dB; Ngoài biên: 0/408 điểm (0%), cho phép ≤0% trong freq_range. Đã đối chiếu LINE CHUẨN cùng cấu hình.
+[2026-11-19 13:25:54.459] [Không có tín hiệu] IO004: mức thu -77,0 dBFS · SNR 0,0 dB — hỏi bấm A/B trên sound card (lần 1).
+[2026-11-19 13:26:00.026] [Không có tín hiệu] IO004: người đo bấm Thử lại.
+[2026-11-19 13:26:10.585] [Export] Saved FEQ screenshot: FRA-IO004.png
+[2026-11-19 13:26:10.586] [Auto Test] LINE IN · Đáp tuyến / THD: 1/1 lượt đạt (cần 1/2). Có tín hiệu sau khi bấm A/B (lần thử lại 1; trước đó mức thu -77,0 dBFS · SNR 0,0 dB). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,168%  · 1000 Hz: 0,201%  · 4000 Hz: 0,076% · Mức thu -32,6 dBFS · SNR 44,9 dB LINE CHUẨN ±3 dB; Ngoài biên: 0/408 điểm (0%), cho phép ≤0% trong freq_range. Đã đối chiếu LINE CHUẨN cùng cấu hình.
+[2026-11-19 13:26:29.631] [Export] Saved FEQ screenshot: FRA-IO005.png
+[2026-11-19 13:26:29.631] [Auto Test] USB A · Đáp tuyến / THD: 0/2 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,262%  · 1000 Hz: 0,037%  · 4000 Hz: 0,020% · Mức thu -33,9 dBFS · SNR chưa xác định (nền thu toàn số 0) LINE CHUẨN ±3 dB; Ngoài biên: 2/408 điểm (0,49%), cho phép ≤0% trong freq_range. Đáp tuyến lệch line chuẩn tối đa 4,88 dB.
+[2026-11-19 13:26:38.277] [TestReview] Đang xem lại đáp tuyến và distortion của IO005 trong khung đồ thị chính.
+[2026-11-19 13:26:39.710] [Không có tín hiệu] IO006: mức thu -38,7 dBFS · SNR 7,2 dB — hỏi bấm A/B trên sound card (lần 1).
+[2026-11-19 13:26:45.354] [Không có tín hiệu] IO006: người đo bấm Thử lại.
+[2026-11-19 13:26:53.583] [Không có tín hiệu] IO006: mức thu -45,0 dBFS · SNR 1,9 dB — hỏi bấm A/B trên sound card (lần 2).
+[2026-11-19 13:27:06.435] [Không có tín hiệu] IO006: người đo bấm Thử lại.
+[2026-11-19 13:27:14.730] [Không có tín hiệu] IO006: mức thu -38,7 dBFS · SNR 8,7 dB — hỏi bấm A/B trên sound card (lần 3).
+[2026-11-19 13:27:16.099] [Không có tín hiệu] IO006: người đo bấm Thử lại.
+[2026-11-19 13:27:24.167] [Không có tín hiệu] IO006: mức thu -39,1 dBFS · SNR 8,7 dB — hỏi bấm A/B trên sound card (lần 4).
+[2026-11-19 13:27:40.906] [Không có tín hiệu] IO006: người đo bấm Bỏ qua.
+[2026-11-19 13:27:48.900] [Không có tín hiệu] IO006: mức thu -38,5 dBFS · SNR 9,5 dB — hỏi bấm A/B trên sound card (lần 1).
+[2026-11-19 13:27:55.435] [Không có tín hiệu] IO006: người đo bấm Thử lại.
+[2026-11-19 13:28:03.527] [Không có tín hiệu] IO006: mức thu -40,1 dBFS · SNR 7,7 dB — hỏi bấm A/B trên sound card (lần 2).
+[2026-11-19 13:29:01.242] [Không có tín hiệu] IO006: người đo bấm Thử lại.
+[2026-11-19 13:29:09.251] [Không có tín hiệu] IO006: mức thu -39,8 dBFS · SNR 8,9 dB — hỏi bấm A/B trên sound card (lần 3).
+[2026-11-19 13:29:12.961] [Không có tín hiệu] IO006: người đo bấm Thử lại.
+[2026-11-19 13:29:21.102] [Không có tín hiệu] IO006: mức thu -46,9 dBFS · SNR 2,4 dB — hỏi bấm A/B trên sound card (lần 4).
