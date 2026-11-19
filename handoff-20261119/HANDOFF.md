@@ -391,6 +391,30 @@ Popup đầu phiên: "Chưa có LINE CHUẨN… IO006… CÓ: mỗi bài thiếu
 
 Bằng chứng: `session-C360_191126_0005\` (log, model.json, ảnh FRA, wav IO003/IO006/IO008).
 
+### 7.7 Lần đo 15:04 (`C360_191126_0006_150358242`, v1.5.6, config **rev 8**)
+
+Rev 8: `AllowLineOutliers` = true cho 5 bài có LINE CHUẨN, IO009 `MinimumAddedDb` = null. Trước khi đo, tiến trình `rundll32 mmsys.cpl` mồ côi đã được đóng.
+
+| Bài | Kết quả |
+|---|---|
+| IO001 | KHÔNG ĐẠT (`ECHO_MISSING`) |
+| IO002, IO004, IO007 | ĐẠT |
+| IO003 | ĐẠT. THD 1 kHz **0,290 %** (cùng loa: 0,21 / 0,44 / 0,70 / 0,29 %, xem §7.4) |
+| IO005 | ĐẠT, 1/408 điểm lệch, "cho phép ≤10%" (ngưỡng 10 % có hiệu lực) |
+| IO006 | "KHÔNG ĐẠT" / không kết luận: **vẫn "LINE CHUẨN lượt 1/3"** như phiên trước, THD 1 kHz 0,686 % (SNR 20,3 dB) |
+| IO008 | ĐO KHÔNG HỢP LỆ: **Pink INVALID "Độ nhạy 41,9 dB < 45 dB: phòng ồn hoặc mic xa loa"**, Chirp PASS (đỉnh rè 0,0 dB @ 23 Hz). Không còn `0x8889000A`, nên **xác nhận rundll32 mmsys.cpl mồ côi là nguyên nhân §7.5** |
+| IO009 | Màn hình ghi **"ĐẠT" màu xanh**, trong khi log ghi "chưa đặt ngưỡng MinimumAddedDb nên chỉ báo số" → phải **xám** (§7.2) |
+| Tổng | CHƯA ĐO ĐỦ. Popup: "Chưa gửi server: còn bài chưa kết luận PASS/FAIL — IO008 INVALID", dù IO001 KHÔNG ĐẠT (§7.1) |
+
+Phát hiện thêm:
+- **IO006 tự lấy LINE CHUẨN không tiến được qua các phiên** (14:49 và 15:05 đều "lượt 1/3"). Có vẻ lượt chỉ được tính vào chuẩn khi THD qua ngưỡng, mà THD âm học 0,57–0,69 % luôn > 0,5 %, nên không bao giờ có chuẩn. Chủ quyết: **IO006 cho phép THD < 0,7 %** (config). Code: tách điều kiện lưu chuẩn khỏi ngưỡng THD, hoặc báo rõ "lượt không được tính vì THD".
+- **IO008 Pink cần to hơn:** chủ quyết **tăng BLE của IO008 lên 80 %** (config). Nếu thang BLE tuyến tính, 50 % → 80 % là +4,1 dB, đủ để 41,9 → khoảng 46 dB > 45.
+- **Ảnh chirp IO008 là một đường phẳng 0,0 dB** từ 23 Hz đến khoảng 1,8 kHz, không thấy các lượt màu xám. Kiểm tra lại: hoặc giá trị đang bị kẹp ở 0 (dư rè ≤ 0 thì vẽ 0), hoặc chưa có dữ liệu mà vẫn vẽ.
+- **Popup "Chưa có LINE CHUẨN" lại được trả lời "Có" sau 1,4 s** (15:04:09,5 → 15:04:10,9). Ảnh chụp màn hình không có đếm ngược, nút "Có — lấy chuẩn rồi đo" đang được focus. Hai lần liên tiếp khoảng 1,5 s: nghi phím Enter của popup QA trước đó lọt sang, hoặc tự chọn mặc định.
+- **Chọn model C360 trong ComboModels hình như tự bắt đầu Auto Test** (15:03:58, Claude chưa bấm nút; cũng có thể người ở trạm bấm đúng lúc đó). Cần kiểm tra trong code.
+
+Bằng chứng: `session-C360_191126_0006\`.
+
 ## 4. File trong thư mục này
 
 - `HANDOFF.md`: file này
