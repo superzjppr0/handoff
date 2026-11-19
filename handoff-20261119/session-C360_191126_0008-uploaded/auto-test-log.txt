@@ -1,0 +1,48 @@
+[2026-11-19 15:28:49.919] [Sound card] Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows. Không có tín hiệu ở một ngõ thì app tự thử các ngõ sound card khác của cấu hình.
+[2026-11-19 15:28:49.930] [Auto Test] Bắt đầu C360_191126_0008 · C360 · IO001 MicEffects, IO002 MicFrequencyShift, IO003 MicDry, IO004 LineIn, IO005 UsbA, IO006 AcousticMic, IO007 Bluetooth, IO008 AcousticRubBuzz, IO009 MicFeedbackGain
+[2026-11-19 15:28:49.930] [Âm lượng] IO001: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:49.931] [Âm lượng] IO002: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:49.931] [Âm lượng] IO003: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:49.932] [Âm lượng] IO004: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:49.932] [Âm lượng] IO005: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:49.933] [Âm lượng] IO006: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:49.933] [Âm lượng] IO007: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:49.933] [Âm lượng] IO008: BLE MASTER 50% · MUSIC 70% · MIC 50% · Windows phát 100% · thu 100%
+[2026-11-19 15:28:49.933] [Âm lượng] IO009: BLE MASTER 50% · MUSIC 50% · MIC 50% · Windows phát 75% · thu 100%
+[2026-11-19 15:28:54.803] [BLE] KBEATBOX · 42:3E:3F:75:2E:7D | Ngõ loa báo hỗ trợ: Bluetooth, USB A, LINE IN, THẺ NHỚ (SD/TF) | Đã chuyển và đọc lại: LINE IN, USB A, Bluetooth | Sound card: MIC IN = Analog 3/4 ✓ có trong Windows · LINE IN = Analog 1/2 ✓ có trong Windows | Sẽ đo: IO001 · IO002 · IO003 · IO004 · IO005 · IO006 · IO007 · IO008 · IO009 (tùy chọn) |  | Tự đóng và bắt đầu đo sau vài giây. · đã chuyển: LINE IN, USB A, Bluetooth
+[2026-11-19 15:29:00.620] [Âm lượng] Đã đặt MASTER DSP 99,61% → 50% qua BLE.
+[2026-11-19 15:29:00.621] [Âm lượng] Đã đặt MUSIC 99,61% → 50% qua BLE.
+[2026-11-19 15:29:05.085] [LINE CHUẨN] Người đo chọn tự lấy LINE CHUẨN từ loa đang đo rồi đo luôn.
+[2026-11-19 15:29:26.566] [Export] Saved FEQ screenshot: FRA-IO001.png
+[2026-11-19 15:29:26.566] [Auto Test] MIC IN · Echo / Reverb: 0/2 lượt đạt (cần 1/2). Có reverb trong bản thu (đuôi liên tục 168 ms). Chưa phát hiện echo trong bản thu. Thiếu echo yêu cầu
+[2026-11-19 15:29:46.899] [Auto Test] MIC IN · Di tần (FBX): 1/1 lượt đạt (cần 1/2). GHI CHÚ: FBX bật/tắt KHÔNG làm đổi di tần (bật -3,007 Hz, tắt -3,000 Hz). Có di tần trong đường MIC: FBX BẬT -3,007 ±0,15 Hz; TẮT -3,000 ±0,15 Hz. Thay đổi BẬT − TẮT -0,007 ±0,15 Hz; chưa thấy di tần thay đổi theo nút FBX. Mức tone khi BẬT so với TẮT: 700 Hz -19,0 dB; 1700 Hz -19,8 dB; 3700 Hz -34,3 dB. Phép đo này chưa đánh giá khả năng dập tiếng hú thực tế.
+[2026-11-19 15:29:55.841] [Export] Saved FEQ screenshot: FRA-IO003.png
+[2026-11-19 15:29:55.842] [Auto Test] MIC IN · Không effect: 1/1 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,859%  · 1000 Hz: 0,418%  · 4000 Hz: 0,074% · Mức thu -12,2 dBFS · SNR 46,3 dB LINE CHUẨN ±3 dB; Ngoài biên: 0/408 điểm (0%), cho phép ≤10% trong freq_range. Đã đối chiếu LINE CHUẨN cùng cấu hình.
+[2026-11-19 15:30:09.915] [Export] Saved FEQ screenshot: FRA-IO004.png
+[2026-11-19 15:30:09.916] [Auto Test] LINE IN · Đáp tuyến / THD: 1/1 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,531%  · 1000 Hz: 0,363%  · 4000 Hz: 0,077% · Mức thu -32,6 dBFS · SNR 37,9 dB LINE CHUẨN ±3 dB; Ngoài biên: 0/408 điểm (0%), cho phép ≤10% trong freq_range. Đã đối chiếu LINE CHUẨN cùng cấu hình.
+[2026-11-19 15:30:20.350] [Export] Saved FEQ screenshot: FRA-IO005.png
+[2026-11-19 15:30:20.351] [Auto Test] USB A · Đáp tuyến / THD: 1/1 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,198%  · 1000 Hz: 0,040%  · 4000 Hz: 0,030% · Mức thu -33,9 dBFS · SNR 29,1 dB
+TÍN HIỆU ĐO THẤP · RMS -33,9 dBFS · headroom 30,8 dB · SNR 29,1 dB. Tín hiệu cao hơn nền chưa tới 30 dB. Nhiễu có thể làm THD đo được tăng. Kiểm tra đúng ngõ, mức thu/gain và nền nhiễu; giữ đủ headroom để tránh clipping. Số THD vẫn được giữ nguyên. LINE CHUẨN ±3 dB; Ngoài biên: 4/408 điểm (0,98%), cho phép ≤10% trong freq_range. Đã đối chiếu LINE CHUẨN cùng cấu hình.
+[2026-11-19 15:31:04.276] [Export] Saved FEQ screenshot: FRA-IO006.png
+[2026-11-19 15:31:04.276] [Auto Test] Mic thực tế KT · Đáp tuyến (FFT) / THD: 0/2 lượt đạt (cần 1/2). Tự lấy LINE CHUẨN chưa xong — không kết luận. Chưa lưu LINE CHUẨN (lượt 3/3): Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,809%  · 1000 Hz: 0,511%  · 4000 Hz: 0,273% · Mức thu -22,3 dBFS · SNR 21,1 dB
+TÍN HIỆU ĐO THẤP · RMS -22,3 dBFS · headroom 6,4 dB · SNR 21,1 dB. Tín hiệu cao hơn nền chưa tới 30 dB. Nhiễu có thể làm THD đo được tăng. Kiểm tra đúng ngõ, mức thu/gain và nền nhiễu; giữ đủ headroom để tránh clipping. Số THD vẫn được giữ nguyên.
+[2026-11-19 15:31:06.173] [Thiết bị Windows] Windows báo mất Headphones (5- KBEATBOX  Stereo); chờ 6 s xem thiết bị có trở lại không.
+[2026-11-19 15:31:12.178] [Thiết bị Windows] Headphones (5- KBEATBOX  Stereo) đã trở lại; đo tiếp.
+[2026-11-19 15:31:14.693] [Export] Saved FEQ screenshot: FRA-IO007.png
+[2026-11-19 15:31:14.693] [Auto Test] BLUETOOTH · Đáp tuyến / THD: 1/1 lượt đạt (cần 1/2). Xét THD: 1000 Hz ≤ 0,5%. THD 80 Hz: 0,135%  · 1000 Hz: 0,015%  · 4000 Hz: 0,014% · Mức thu -24,0 dBFS · SNR 31,1 dB LINE CHUẨN ±3 dB; Ngoài biên: 0/408 điểm (0%), cho phép ≤10% trong freq_range. Đã đối chiếu LINE CHUẨN cùng cấu hình.
+[2026-11-19 15:31:16.091] [TestReview] Đang xem lại đáp tuyến và distortion của IO006 trong khung đồ thị chính.
+[2026-11-19 15:31:16.932] [Lượt sweep âm học] Lượt 1/2 · cần 1 lượt đạt
+[2026-11-19 15:32:03.565] [Export] Saved FEQ screenshot: FRA-IO008.png
+[2026-11-19 15:32:03.768] [Export] Đã lưu ảnh chirp rè cho IO008: FRA-IO008.png
+[2026-11-19 15:32:03.768] [Auto Test] Mic thực tế · Rè (Rub & Buzz): 1/1 lượt đạt (cần 1/2). Kiểm tín hiệu mic đo: mức thu -16,3 dBFS · SNR 27,9 dB (không xét THD/đáp tuyến ở bài Rè).
+Rè/rung · Pink + Chirp: PASS — Pink — PASS: Ngưỡng tuyệt đối (không dùng line chuẩn): PASS khi rè lặp lại < 30% · đo 29,4%.
+Rè lặp lại 29,4% · cao tần 4–12 kHz -64,6 dBFS · bass mic -16,9 dBFS · độ nhạy 46,8 dB · giữ 90% khung
+Chirp — PASS: Ngưỡng tuyệt đối (không dùng line chuẩn): PASS khi đỉnh rè < 10 dB · đo 0,0 dB tại 23 Hz.
+Đỉnh rè 0,0 dB tại 23 Hz · cao tần trên 10·f vượt nền -0,8 dB · mức cơ bản 41,3 dB (tương đối)
+[2026-11-19 15:32:12.876] [Auto Test] MIC IN · Gain trước hú (FBX tắt/bật): 1/1 lượt đạt (cần 1/1). Gain trước hú: FBX TẮT hú ở -28,0 dB (129 Hz, hú mạnh 53 dB trên nền); FBX BẬT hú ở -28,0 dB (118 Hz, hú mạnh 54 dB). Tại gain đó FBX bật giảm đỉnh hú -1,4 dB. FBX thêm được +0,0 dB · GHI CHÚ: chưa đặt ngưỡng MinimumAddedDb nên chỉ báo số, chưa kết luận chống hú đạt/không đạt.
+[2026-11-19 15:32:46.152] [So sánh QA] Serial C360_191126_0008 · Auto · QA NONE · CHƯA CÓ QA · xác nhận 2026-11-19T15:28:49.6902965+07:00 · Lê Anh Thư
+[2026-11-19 15:32:46.165] [Auto Test] C360: 236,3s (chuẩn bị BLE 8,9s); đã đọc lại và khôi phục trạng thái loa.
+[2026-11-19 15:32:56.278] [Server] Upload một log QA cho sản phẩm C360_191126_0008, phiên C360_191126_0008_152849908, gồm 9 bài đo.
+[2026-11-19 15:33:02.903] [Server] Upload thành công đúng một log QA cho C360_191126_0008, phiên C360_191126_0008_152849908.
+[2026-11-19 15:33:09.918] [Âm lượng] Đã khôi phục âm lượng loa về mức trước khi đo.
+[2026-11-19 15:33:14.405] [Bluetooth] Người đo chọn giữ thiết bị Bluetooth.

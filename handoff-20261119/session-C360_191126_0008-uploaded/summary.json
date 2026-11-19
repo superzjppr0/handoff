@@ -1,0 +1,127 @@
+{
+  "model": "C360",
+  "serial": "C360_191126_0008",
+  "operatorNote": null,
+  "seconds": 236.2453923,
+  "connectSeconds": 8.9286084,
+  "results": [
+    {
+      "StageName": "MIC IN \u00B7 Echo / Reverb",
+      "Status": "FAIL",
+      "Summary": "0/2 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). C\u00F3 reverb trong b\u1EA3n thu (\u0111u\u00F4i li\u00EAn t\u1EE5c 168 ms). Ch\u01B0a ph\u00E1t hi\u1EC7n echo trong b\u1EA3n thu. Thi\u1EBFu echo y\u00EAu c\u1EA7u",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "FAIL",
+          "Summary": "C\u00F3 reverb trong b\u1EA3n thu (\u0111u\u00F4i li\u00EAn t\u1EE5c 168 ms). Ch\u01B0a ph\u00E1t hi\u1EC7n echo trong b\u1EA3n thu. Thi\u1EBFu echo y\u00EAu c\u1EA7u"
+        },
+        {
+          "Run": 2,
+          "Status": "FAIL",
+          "Summary": "C\u00F3 reverb trong b\u1EA3n thu (\u0111u\u00F4i li\u00EAn t\u1EE5c 168 ms). Ch\u01B0a ph\u00E1t hi\u1EC7n echo trong b\u1EA3n thu. Thi\u1EBFu echo y\u00EAu c\u1EA7u"
+        }
+      ]
+    },
+    {
+      "StageName": "MIC IN \u00B7 Di t\u1EA7n (FBX)",
+      "Status": "PASS",
+      "Summary": "1/1 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). GHI CH\u00DA: FBX b\u1EADt/t\u1EAFt KH\u00D4NG l\u00E0m \u0111\u1ED5i di t\u1EA7n (b\u1EADt -3,007 Hz, t\u1EAFt -3,000 Hz). C\u00F3 di t\u1EA7n trong \u0111\u01B0\u1EDDng MIC: FBX B\u1EACT -3,007 \u00B10,15 Hz; T\u1EAET -3,000 \u00B10,15 Hz. Thay \u0111\u1ED5i B\u1EACT \u2212 T\u1EAET -0,007 \u00B10,15 Hz; ch\u01B0a th\u1EA5y di t\u1EA7n thay \u0111\u1ED5i theo n\u00FAt FBX. M\u1EE9c tone khi B\u1EACT so v\u1EDBi T\u1EAET: 700 Hz -19,0 dB; 1700 Hz -19,8 dB; 3700 Hz -34,3 dB. Ph\u00E9p \u0111o n\u00E0y ch\u01B0a \u0111\u00E1nh gi\u00E1 kh\u1EA3 n\u0103ng d\u1EADp ti\u1EBFng h\u00FA th\u1EF1c t\u1EBF.",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "PASS",
+          "Summary": "GHI CH\u00DA: FBX b\u1EADt/t\u1EAFt KH\u00D4NG l\u00E0m \u0111\u1ED5i di t\u1EA7n (b\u1EADt -3,007 Hz, t\u1EAFt -3,000 Hz). C\u00F3 di t\u1EA7n trong \u0111\u01B0\u1EDDng MIC: FBX B\u1EACT -3,007 \u00B10,15 Hz; T\u1EAET -3,000 \u00B10,15 Hz. Thay \u0111\u1ED5i B\u1EACT \u2212 T\u1EAET -0,007 \u00B10,15 Hz; ch\u01B0a th\u1EA5y di t\u1EA7n thay \u0111\u1ED5i theo n\u00FAt FBX. M\u1EE9c tone khi B\u1EACT so v\u1EDBi T\u1EAET: 700 Hz -19,0 dB; 1700 Hz -19,8 dB; 3700 Hz -34,3 dB. Ph\u00E9p \u0111o n\u00E0y ch\u01B0a \u0111\u00E1nh gi\u00E1 kh\u1EA3 n\u0103ng d\u1EADp ti\u1EBFng h\u00FA th\u1EF1c t\u1EBF."
+        }
+      ]
+    },
+    {
+      "StageName": "MIC IN \u00B7 Kh\u00F4ng effect",
+      "Status": "PASS",
+      "Summary": "1/1 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,859%  \u00B7 1000 Hz: 0,418%  \u00B7 4000 Hz: 0,074% \u00B7 M\u1EE9c thu -12,2 dBFS \u00B7 SNR 46,3 dB LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 0/408 \u0111i\u1EC3m (0%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh.",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "PASS",
+          "Summary": "X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,859%  \u00B7 1000 Hz: 0,418%  \u00B7 4000 Hz: 0,074% \u00B7 M\u1EE9c thu -12,2 dBFS \u00B7 SNR 46,3 dB LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 0/408 \u0111i\u1EC3m (0%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh."
+        }
+      ]
+    },
+    {
+      "StageName": "LINE IN",
+      "Status": "PASS",
+      "Summary": "1/1 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,531%  \u00B7 1000 Hz: 0,363%  \u00B7 4000 Hz: 0,077% \u00B7 M\u1EE9c thu -32,6 dBFS \u00B7 SNR 37,9 dB LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 0/408 \u0111i\u1EC3m (0%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh.",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "PASS",
+          "Summary": "X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,531%  \u00B7 1000 Hz: 0,363%  \u00B7 4000 Hz: 0,077% \u00B7 M\u1EE9c thu -32,6 dBFS \u00B7 SNR 37,9 dB LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 0/408 \u0111i\u1EC3m (0%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh."
+        }
+      ]
+    },
+    {
+      "StageName": "USB A",
+      "Status": "PASS",
+      "Summary": "1/1 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,198%  \u00B7 1000 Hz: 0,040%  \u00B7 4000 Hz: 0,030% \u00B7 M\u1EE9c thu -33,9 dBFS \u00B7 SNR 29,1 dB\nT\u00CDN HI\u1EC6U \u0110O TH\u1EA4P \u00B7 RMS -33,9 dBFS \u00B7 headroom 30,8 dB \u00B7 SNR 29,1 dB. T\u00EDn hi\u1EC7u cao h\u01A1n n\u1EC1n ch\u01B0a t\u1EDBi 30 dB. Nhi\u1EC5u c\u00F3 th\u1EC3 l\u00E0m THD \u0111o \u0111\u01B0\u1EE3c t\u0103ng. Ki\u1EC3m tra \u0111\u00FAng ng\u00F5, m\u1EE9c thu/gain v\u00E0 n\u1EC1n nhi\u1EC5u; gi\u1EEF \u0111\u1EE7 headroom \u0111\u1EC3 tr\u00E1nh clipping. S\u1ED1 THD v\u1EABn \u0111\u01B0\u1EE3c gi\u1EEF nguy\u00EAn. LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 4/408 \u0111i\u1EC3m (0,98%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh.",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "PASS",
+          "Summary": "X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,198%  \u00B7 1000 Hz: 0,040%  \u00B7 4000 Hz: 0,030% \u00B7 M\u1EE9c thu -33,9 dBFS \u00B7 SNR 29,1 dB\nT\u00CDN HI\u1EC6U \u0110O TH\u1EA4P \u00B7 RMS -33,9 dBFS \u00B7 headroom 30,8 dB \u00B7 SNR 29,1 dB. T\u00EDn hi\u1EC7u cao h\u01A1n n\u1EC1n ch\u01B0a t\u1EDBi 30 dB. Nhi\u1EC5u c\u00F3 th\u1EC3 l\u00E0m THD \u0111o \u0111\u01B0\u1EE3c t\u0103ng. Ki\u1EC3m tra \u0111\u00FAng ng\u00F5, m\u1EE9c thu/gain v\u00E0 n\u1EC1n nhi\u1EC5u; gi\u1EEF \u0111\u1EE7 headroom \u0111\u1EC3 tr\u00E1nh clipping. S\u1ED1 THD v\u1EABn \u0111\u01B0\u1EE3c gi\u1EEF nguy\u00EAn. LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 4/408 \u0111i\u1EC3m (0,98%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh."
+        }
+      ]
+    },
+    {
+      "StageName": "Mic th\u1EF1c t\u1EBF \u00B7 \u00C2m h\u1ECDc",
+      "Status": "FAIL",
+      "Summary": "0/2 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). T\u1EF1 l\u1EA5y LINE CHU\u1EA8N ch\u01B0a xong \u2014 kh\u00F4ng k\u1EBFt lu\u1EADn. Ch\u01B0a l\u01B0u LINE CHU\u1EA8N (l\u01B0\u1EE3t 3/3): X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,809%  \u00B7 1000 Hz: 0,511%  \u00B7 4000 Hz: 0,273% \u00B7 M\u1EE9c thu -22,3 dBFS \u00B7 SNR 21,1 dB\nT\u00CDN HI\u1EC6U \u0110O TH\u1EA4P \u00B7 RMS -22,3 dBFS \u00B7 headroom 6,4 dB \u00B7 SNR 21,1 dB. T\u00EDn hi\u1EC7u cao h\u01A1n n\u1EC1n ch\u01B0a t\u1EDBi 30 dB. Nhi\u1EC5u c\u00F3 th\u1EC3 l\u00E0m THD \u0111o \u0111\u01B0\u1EE3c t\u0103ng. Ki\u1EC3m tra \u0111\u00FAng ng\u00F5, m\u1EE9c thu/gain v\u00E0 n\u1EC1n nhi\u1EC5u; gi\u1EEF \u0111\u1EE7 headroom \u0111\u1EC3 tr\u00E1nh clipping. S\u1ED1 THD v\u1EABn \u0111\u01B0\u1EE3c gi\u1EEF nguy\u00EAn.",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "FAIL",
+          "Summary": "T\u1EF1 l\u1EA5y LINE CHU\u1EA8N ch\u01B0a xong \u2014 kh\u00F4ng k\u1EBFt lu\u1EADn. Ch\u01B0a l\u01B0u LINE CHU\u1EA8N (l\u01B0\u1EE3t 2/3): X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,791%  \u00B7 1000 Hz: 0,544%  \u00B7 4000 Hz: 0,241% \u00B7 M\u1EE9c thu -22,6 dBFS \u00B7 SNR 26,5 dB\nT\u00CDN HI\u1EC6U \u0110O TH\u1EA4P \u00B7 RMS -22,6 dBFS \u00B7 headroom 6,5 dB \u00B7 SNR 26,5 dB. T\u00EDn hi\u1EC7u cao h\u01A1n n\u1EC1n ch\u01B0a t\u1EDBi 30 dB. Nhi\u1EC5u c\u00F3 th\u1EC3 l\u00E0m THD \u0111o \u0111\u01B0\u1EE3c t\u0103ng. Ki\u1EC3m tra \u0111\u00FAng ng\u00F5, m\u1EE9c thu/gain v\u00E0 n\u1EC1n nhi\u1EC5u; gi\u1EEF \u0111\u1EE7 headroom \u0111\u1EC3 tr\u00E1nh clipping. S\u1ED1 THD v\u1EABn \u0111\u01B0\u1EE3c gi\u1EEF nguy\u00EAn."
+        },
+        {
+          "Run": 2,
+          "Status": "FAIL",
+          "Summary": "T\u1EF1 l\u1EA5y LINE CHU\u1EA8N ch\u01B0a xong \u2014 kh\u00F4ng k\u1EBFt lu\u1EADn. Ch\u01B0a l\u01B0u LINE CHU\u1EA8N (l\u01B0\u1EE3t 3/3): X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,809%  \u00B7 1000 Hz: 0,511%  \u00B7 4000 Hz: 0,273% \u00B7 M\u1EE9c thu -22,3 dBFS \u00B7 SNR 21,1 dB\nT\u00CDN HI\u1EC6U \u0110O TH\u1EA4P \u00B7 RMS -22,3 dBFS \u00B7 headroom 6,4 dB \u00B7 SNR 21,1 dB. T\u00EDn hi\u1EC7u cao h\u01A1n n\u1EC1n ch\u01B0a t\u1EDBi 30 dB. Nhi\u1EC5u c\u00F3 th\u1EC3 l\u00E0m THD \u0111o \u0111\u01B0\u1EE3c t\u0103ng. Ki\u1EC3m tra \u0111\u00FAng ng\u00F5, m\u1EE9c thu/gain v\u00E0 n\u1EC1n nhi\u1EC5u; gi\u1EEF \u0111\u1EE7 headroom \u0111\u1EC3 tr\u00E1nh clipping. S\u1ED1 THD v\u1EABn \u0111\u01B0\u1EE3c gi\u1EEF nguy\u00EAn."
+        }
+      ]
+    },
+    {
+      "StageName": "BT \u00B7 Bluetooth",
+      "Status": "PASS",
+      "Summary": "1/1 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,135%  \u00B7 1000 Hz: 0,015%  \u00B7 4000 Hz: 0,014% \u00B7 M\u1EE9c thu -24,0 dBFS \u00B7 SNR 31,1 dB LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 0/408 \u0111i\u1EC3m (0%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh.",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "PASS",
+          "Summary": "X\u00E9t THD: 1000 Hz \u2264 0,5%. THD 80 Hz: 0,135%  \u00B7 1000 Hz: 0,015%  \u00B7 4000 Hz: 0,014% \u00B7 M\u1EE9c thu -24,0 dBFS \u00B7 SNR 31,1 dB LINE CHU\u1EA8N \u00B13 dB; Ngo\u00E0i bi\u00EAn: 0/408 \u0111i\u1EC3m (0%), cho ph\u00E9p \u226410% trong freq_range. \u0110\u00E3 \u0111\u1ED1i chi\u1EBFu LINE CHU\u1EA8N c\u00F9ng c\u1EA5u h\u00ECnh."
+        }
+      ]
+    },
+    {
+      "StageName": "Mic th\u1EF1c t\u1EBF \u00B7 R\u00E8 (Rub \u0026 Buzz)",
+      "Status": "PASS",
+      "Summary": "1/1 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/2). Ki\u1EC3m t\u00EDn hi\u1EC7u mic \u0111o: m\u1EE9c thu -16,3 dBFS \u00B7 SNR 27,9 dB (kh\u00F4ng x\u00E9t THD/\u0111\u00E1p tuy\u1EBFn \u1EDF b\u00E0i R\u00E8).\r\nR\u00E8/rung \u00B7 Pink \u002B Chirp: PASS \u2014 Pink \u2014 PASS: Ng\u01B0\u1EE1ng tuy\u1EC7t \u0111\u1ED1i (kh\u00F4ng d\u00F9ng line chu\u1EA9n): PASS khi r\u00E8 l\u1EB7p l\u1EA1i \u003C 30% \u00B7 \u0111o 29,4%.\r\nR\u00E8 l\u1EB7p l\u1EA1i 29,4% \u00B7 cao t\u1EA7n 4\u201312 kHz -64,6 dBFS \u00B7 bass mic -16,9 dBFS \u00B7 \u0111\u1ED9 nh\u1EA1y 46,8 dB \u00B7 gi\u1EEF 90% khung\r\nChirp \u2014 PASS: Ng\u01B0\u1EE1ng tuy\u1EC7t \u0111\u1ED1i (kh\u00F4ng d\u00F9ng line chu\u1EA9n): PASS khi \u0111\u1EC9nh r\u00E8 \u003C 10 dB \u00B7 \u0111o 0,0 dB t\u1EA1i 23 Hz.\r\n\u0110\u1EC9nh r\u00E8 0,0 dB t\u1EA1i 23 Hz \u00B7 cao t\u1EA7n tr\u00EAn 10\u00B7f v\u01B0\u1EE3t n\u1EC1n -0,8 dB \u00B7 m\u1EE9c c\u01A1 b\u1EA3n 41,3 dB (t\u01B0\u01A1ng \u0111\u1ED1i)",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "PASS",
+          "Summary": "Ki\u1EC3m t\u00EDn hi\u1EC7u mic \u0111o: m\u1EE9c thu -16,3 dBFS \u00B7 SNR 27,9 dB (kh\u00F4ng x\u00E9t THD/\u0111\u00E1p tuy\u1EBFn \u1EDF b\u00E0i R\u00E8)."
+        }
+      ]
+    },
+    {
+      "StageName": "MIC IN \u00B7 Gain tr\u01B0\u1EDBc h\u00FA (FBX)",
+      "Status": "PASS",
+      "Summary": "1/1 l\u01B0\u1EE3t \u0111\u1EA1t (c\u1EA7n 1/1). Gain tr\u01B0\u1EDBc h\u00FA: FBX T\u1EAET h\u00FA \u1EDF -28,0 dB (129 Hz, h\u00FA m\u1EA1nh 53 dB tr\u00EAn n\u1EC1n); FBX B\u1EACT h\u00FA \u1EDF -28,0 dB (118 Hz, h\u00FA m\u1EA1nh 54 dB). T\u1EA1i gain \u0111\u00F3 FBX b\u1EADt gi\u1EA3m \u0111\u1EC9nh h\u00FA -1,4 dB. FBX th\u00EAm \u0111\u01B0\u1EE3c \u002B0,0 dB \u00B7 GHI CH\u00DA: ch\u01B0a \u0111\u1EB7t ng\u01B0\u1EE1ng MinimumAddedDb n\u00EAn ch\u1EC9 b\u00E1o s\u1ED1, ch\u01B0a k\u1EBFt lu\u1EADn ch\u1ED1ng h\u00FA \u0111\u1EA1t/kh\u00F4ng \u0111\u1EA1t.",
+      "Attempts": [
+        {
+          "Run": 1,
+          "Status": "PASS",
+          "Summary": "Gain tr\u01B0\u1EDBc h\u00FA: FBX T\u1EAET h\u00FA \u1EDF -28,0 dB (129 Hz, h\u00FA m\u1EA1nh 53 dB tr\u00EAn n\u1EC1n); FBX B\u1EACT h\u00FA \u1EDF -28,0 dB (118 Hz, h\u00FA m\u1EA1nh 54 dB). T\u1EA1i gain \u0111\u00F3 FBX b\u1EADt gi\u1EA3m \u0111\u1EC9nh h\u00FA -1,4 dB. FBX th\u00EAm \u0111\u01B0\u1EE3c \u002B0,0 dB \u00B7 GHI CH\u00DA: ch\u01B0a \u0111\u1EB7t ng\u01B0\u1EE1ng MinimumAddedDb n\u00EAn ch\u1EC9 b\u00E1o s\u1ED1, ch\u01B0a k\u1EBFt lu\u1EADn ch\u1ED1ng h\u00FA \u0111\u1EA1t/kh\u00F4ng \u0111\u1EA1t."
+        }
+      ]
+    }
+  ]
+}

@@ -17,6 +17,27 @@ Hiện trạng v1.5.6: phiên `C360_191126_0006` có IO001 **KHÔNG ĐẠT**, nh
 
 Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
 
+### ✅ 15:33: phiên đầu tiên lên server (v1.5.6 + config rev 9)
+
+`C360_191126_0008_152849908`: **Upload thành công đúng một log QA, gồm 9 bài, kết quả chung KHÔNG ĐẠT.** Rev 9 đặt IO008 `TestVolume` = BLE MUSIC 70 %, Windows phát 100 %, nên Pink độ nhạy 46,8 dB (≥ 45), IO008 ĐẠT. Lưu ý: "Rè lặp lại **29,4 %**", rất sát ngưỡng < 30 %. Chirp vẫn là đường phẳng 0,0 dB.
+- IO001 KHÔNG ĐẠT (mất echo). IO002–IO005, IO007, IO008 ĐẠT. IO009 hiện "ĐẠT" (phải xám).
+- IO006 KHÔNG ĐẠT: **THD 1 kHz 0,511 % > 0,5 %**. Rev 9 vẫn để `THD_1000Hz` = 0,5; chủ muốn **0,7** (config, chưa áp dụng). LINE CHUẨN đã tới "lượt 3/3" nhưng "Chưa lưu", vì lượt có THD vượt ngưỡng thì không được lưu (xác nhận §7.7).
+
+### Kèm theo: gửi server ngầm theo từng bài + app đơ khoảng 50 s cuối phiên
+
+> Chủ: "gửi lên server ngầm cho từng bài luôn chứ chờ xong hết mới gửi sẽ rất lâu"
+
+- Đo được: IO009 xong 15:32:13 → `[So sánh QA]` 15:32:46 → upload bắt đầu 15:32:56 → xong 15:33:02 → popup 15:33:05. Suốt **khoảng 50 s** đó, UI Automation không đọc được control nào của cửa sổ chính (`LblVerdict = ?`), tức **luồng UI bị chặn**. Người đo thấy app đứng hoặc "ẩn màn hình". Có thể đây chính là lỗi "bấm đo lại có lúc bị ẩn màn hình" (§6.6).
+- **Đặc tả:**
+  1. Mỗi bài xong thì đưa vào **hàng đợi gửi nền** (background, không chặn UI): ảnh FRA, số đo, kết luận bài. Server nhận theo `phiên + mã bài`, ghi đè khi bài được đo lại.
+  2. Cuối phiên chỉ gửi **bản tổng** (kết luận chung + note lỗi ngắn), lúc đó các bài đã nằm sẵn trên server, nên vài giây là xong.
+  3. Mất mạng thì hàng đợi lưu xuống đĩa và gửi lại sau; popup cuối phiên ghi "đã gửi x/9 bài, tổng: …".
+  4. Không làm việc nặng (xuất ảnh, nén, so QA, HTTP) trên luồng UI; thanh trạng thái hiện "Đang gửi nền…".
+
+### Đính chính §7.7
+- "Chọn model tự bắt đầu Auto Test": **không tái hiện** (15:27 chọn C360, app vẫn "ĐANG CHỜ…"). Lần trước có lẽ người ở trạm bấm đúng lúc.
+- "Popup LINE CHUẨN tự chọn Có sau 1,4 s": **không tái hiện** (15:29 popup đứng chờ, người đo bấm Có).
+
 ### Kèm theo: ghi chú (note) gửi server chỉ ghi ngắn gọn LỖI
 
 > Chủ: "kết luận gửi lên server phần note chỉ ghi ngắn gọn lỗi thôi … (ở đây có thể là mất Echo, THD cao: 0.7%) ví dụ có hú cao thì cũng note còn như vậy thì không note. chủ yếu có lỗi mới note"
