@@ -105,6 +105,23 @@ Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
 - Ảnh gốc **không bị cắt**: `FRA-IO007.png` 800×450, đủ tiêu đề và trục, cùng cỡ với IO003–IO009. Lỗi khuất mép trên nằm ở CSS/layout trang web.
 - Lưu ý kích thước không đồng đều: `FRA-IO001.png` là **1600×900**, các ảnh khác 800×450. App nên xuất cùng một cỡ, và web vẫn phải tự co theo khung.
 
+### Kèm theo: FACTORY FLOOR QA & APP TRACKER phải dùng tốt trên điện thoại → WEB
+
+> Chủ: "giao diện FACTORY FLOOR QA & APP TRACKER cũng cần phù hợp với cả bản mobile"
+
+Yêu cầu (áp dụng cho trang danh sách và trang chi tiết log QA, cả Quy trình QA/QC):
+1. **Không cuộn ngang cả trang** ở bề rộng 360–430 px. Lề hai bên khoảng 12–16 px.
+2. **Danh sách:** dưới khoảng 768 px thì bảng chuyển thành **thẻ (card)**, mỗi thẻ một phiên:
+   - dòng 1: model · serial/ID · **kết luận** (badge màu kèm chữ ĐẠT / KHÔNG ĐẠT / CHƯA ĐỦ);
+   - dòng 2: thời gian · người đo · phiên bản app;
+   - dòng 3: **note lỗi ngắn** (ví dụ "Mất echo; THD cao 0,70%"), không có lỗi thì ẩn dòng này.
+   Bấm vào thẻ thì mở chi tiết.
+3. **Bộ lọc** (model, ngày, kết luận, tìm serial) gom vào một nút "Lọc" mở ngăn kéo hoặc sheet. Ô tìm serial luôn hiện, có nút quét QR bằng camera nếu được.
+4. **Chi tiết:** mỗi bài (IO001…) là một dòng gọn: mã · tên ngắn · badge. Bấm mở khối thu gọn chứa thông số kỹ thuật **và ảnh** (xem mục trên). Ảnh `width: 100%`, giữ tỉ lệ, chạm vào thì phóng toàn màn hình (pinch-zoom). Bài tùy chọn (IO009) hiện xám.
+5. Vùng chạm ≥ 44 px, chữ thân ≥ 14 px, số đo dùng font chữ số đều (tabular). Không để bảng thông số vỡ dòng xấu: trên mobile xếp dạng "nhãn: giá trị" theo cột dọc.
+6. Phân trang hoặc tải thêm khi cuộn. Ảnh lazy-load, dùng thumbnail nhỏ trong danh sách để tiết kiệm 4G.
+7. Kiểm tra trên Chrome Android và Safari iOS ở cả chiều dọc lẫn ngang. Desktop giữ nguyên dạng bảng.
+
 ### Kèm theo: ghi chú (note) gửi server chỉ ghi ngắn gọn LỖI
 
 > Chủ: "kết luận gửi lên server phần note chỉ ghi ngắn gọn lỗi thôi … (ở đây có thể là mất Echo, THD cao: 0.7%) ví dụ có hú cao thì cũng note còn như vậy thì không note. chủ yếu có lỗi mới note"
