@@ -96,6 +96,15 @@ Sau khi phát bản mới, trạm đo lại ngay để xác nhận lên tracker.
 - "Chọn model tự bắt đầu Auto Test": **không tái hiện** (15:27 chọn C360, app vẫn "ĐANG CHỜ…"). Lần trước có lẽ người ở trạm bấm đúng lúc.
 - "Popup LINE CHUẨN tự chọn Có sau 1,4 s": **không tái hiện** (15:29 popup đứng chờ, người đo bấm Có).
 
+### Kèm theo: trang báo cáo trên server, ảnh đặt trong từng bài (ẩn như thông số kỹ thuật) + ảnh IO007 bị khuất mép trên → WEB
+
+> Chủ: "ảnh nên để chung vào bài đo (cũng ẩn giống thông số kỹ thuật) IO007 đang bị khuất biên trên (có thể thu nhỏ để fit biên)"
+
+- Trang chi tiết log QA (FACTORY FLOOR QA & APP TRACKER / Quy trình QA/QC): **ảnh của bài nào nằm trong dòng của bài đó**, trong khối thu gọn, **mặc định ẩn** giống "Thông số kỹ thuật" (bấm mở thì hiện thông số và ảnh). Không để ảnh thành một khu riêng.
+- Hiển thị ảnh: `max-width: 100%; height: auto; object-fit: contain`. Không đặt chiều cao cố định, không dùng `object-fit: cover` hay `overflow: hidden` để cắt ảnh, cho thu nhỏ vừa khung.
+- Ảnh gốc **không bị cắt**: `FRA-IO007.png` 800×450, đủ tiêu đề và trục, cùng cỡ với IO003–IO009. Lỗi khuất mép trên nằm ở CSS/layout trang web.
+- Lưu ý kích thước không đồng đều: `FRA-IO001.png` là **1600×900**, các ảnh khác 800×450. App nên xuất cùng một cỡ, và web vẫn phải tự co theo khung.
+
 ### Kèm theo: ghi chú (note) gửi server chỉ ghi ngắn gọn LỖI
 
 > Chủ: "kết luận gửi lên server phần note chỉ ghi ngắn gọn lỗi thôi … (ở đây có thể là mất Echo, THD cao: 0.7%) ví dụ có hú cao thì cũng note còn như vậy thì không note. chủ yếu có lỗi mới note"
